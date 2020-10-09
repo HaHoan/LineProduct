@@ -101,186 +101,85 @@ namespace Line_Production
 
         public bool CheckComControlPort()
         {
-            string Line;
-            if (File.Exists(PathSetupComport) == true)
+            string com = Common.GetValueRegistryKey(Constants.PathConfig, "COM");
+            if (com == null || SerialPort.GetPortNames() == null || SerialPort.GetPortNames().Length == 0)
             {
-                Line = ReadTextFile(PathSetupComport, 2); // cai dat cong com
-                ComControl = Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1);
-                Line = Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length);
-                SetBaudRateComControl = (int)Conversion.Val(Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1));
-                Line = Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length);
-                SetDataBitsComControl = (int)Conversion.Val(Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1));
-                Line = Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length);
-                SetParityComControl = Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1);
-                SetStopBitsComControl = (int)Conversion.Val(Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length));
-                {
-                    var withBlock = ComControlPort;
-                    withBlock.PortName = ComControl;
-                    withBlock.BaudRate = SetBaudRateComControl;
-                    withBlock.DataBits = SetDataBitsComControl;
-                    if (SetParityComControl == "None")
-                    {
-                        withBlock.Parity = Parity.None;
-                    }
-                    else if (SetParityComControl == "Even")
-                    {
-                        withBlock.Parity = Parity.Even;
-                    }
-                    else if (SetParityComControl == "Odd")
-                    {
-                        withBlock.Parity = Parity.Odd;
-                    }
-                    else if (SetParityComControl == "Mark")
-                    {
-                        withBlock.Parity = Parity.Mark;
-                    }
-                    else if (SetParityComControl == "Space")
-                    {
-                        withBlock.Parity = Parity.Space;
-                    }
-
-                    if (SetStopBitsComControl == 0)
-                    {
-                        withBlock.StopBits = StopBits.None;
-                    }
-                    else if (SetStopBitsComControl == 1)
-                    {
-                        withBlock.StopBits = StopBits.One;
-                    }
-                    else if (SetStopBitsComControl == 2)
-                    {
-                        withBlock.StopBits = StopBits.Two;
-                    }
-
-                    withBlock.Handshake = Handshake.None;
-                    withBlock.ReceivedBytesThreshold = 1;
-                }
-
-                try
-                {
-                    
-                    if (ComControlPort.IsOpen == true)
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        ComControlPort.Open();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("COM Control: " + ComControl + " not connect. Please check connect the device !", "Error device", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-
-                return true;
-            }
-            else
-            {
+                MessageBox.Show("Chưa kết nối cổng COM");
                 return false;
             }
-        }
-
-        public bool CheckComPressPort()
-        {
-            string Line;
-            if (File.Exists(PathSetupComport) == true)
+            ComControl = com;
+            string baudRate = Common.GetValueRegistryKey(Constants.PathConfig, "BaudRate");
+            if (baudRate == null)
             {
-                Line = ReadTextFile(PathSetupComport, 4); // cai dat cong com
-                ComPress = Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1);
-                Line = Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length);
-                SetBaudRateComPress = (int)Conversion.Val(Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1));
-                Line = Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length);
-                SetDataBitsComPress = (int)Conversion.Val(Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1));
-                Line = Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length);
-                SetParityComPress = Strings.Mid(Line, 1, Strings.InStr(Line, ",", CompareMethod.Text) - 1);
-                SetStopBitsComPress = (int)Conversion.Val(Strings.Mid(Line, Strings.InStr(Line, ",", CompareMethod.Text) + 1, Line.Length));
-                {
-                    var withBlock = ComPressPort;
-                    withBlock.PortName = ComPress;
-                    withBlock.BaudRate = SetBaudRateComPress;
-                    withBlock.DataBits = SetDataBitsComPress;
-                    if (SetParityComPress == "None")
-                    {
-                        withBlock.Parity = Parity.None;
-                    }
-                    else if (SetParityComPress == "Even")
-                    {
-                        withBlock.Parity = Parity.Even;
-                    }
-                    else if (SetParityComPress == "Odd")
-                    {
-                        withBlock.Parity = Parity.Odd;
-                    }
-                    else if (SetParityComPress == "Mark")
-                    {
-                        withBlock.Parity = Parity.Mark;
-                    }
-                    else if (SetParityComPress == "Space")
-                    {
-                        withBlock.Parity = Parity.Space;
-                    }
+                baudRate = Constants.BaudRate;
+                Common.WriteRegistry(Constants.PathConfig, "BaudRate", baudRate);
+            }
+            SetBaudRateComControl = (int)Conversion.Val(baudRate);
+            string dataBits = Common.GetValueRegistryKey(Constants.PathConfig, "DataBits");
+            if (dataBits == null)
+            {
+                dataBits = Constants.DataBits;
+                Common.WriteRegistry(Constants.PathConfig, "DataBits", dataBits);
+            }
+            SetDataBitsComControl = (int)Conversion.Val(dataBits); //8
+            string Parity = Common.GetValueRegistryKey(Constants.PathConfig, "Parity");
+            if (Parity == null)
+            {
+                Parity = Constants.Parity;
+                Common.WriteRegistry(Constants.PathConfig, "Parity", dataBits);
+            }
+            SetParityComControl = Parity; // None
+            string StopBits = Common.GetValueRegistryKey(Constants.PathConfig, "StopBits");
+            if (StopBits == null)
+            {
+                StopBits = Constants.StopBits;
+                Common.WriteRegistry(Constants.PathConfig, "StopBits", StopBits);
+            }
+            SetStopBitsComControl = (int)Conversion.Val(StopBits); //1
 
-                    if (SetStopBitsComPress == 0)
-                    {
-                        withBlock.StopBits = StopBits.None;
-                    }
-                    else if (SetStopBitsComPress == 1)
-                    {
-                        withBlock.StopBits = StopBits.One;
-                    }
-                    else if (SetStopBitsComPress == 2)
-                    {
-                        withBlock.StopBits = StopBits.Two;
-                    }
+            try
+            {
 
-                    withBlock.Handshake = Handshake.None;
-                    withBlock.ReceivedBytesThreshold = 1;
-                }
-
-                try
+                if (ComControlPort.IsOpen == true)
                 {
-                    ComPressPort.Open();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("COM Press: " + ComPress + " not connect. Please check connect the device !", "Error device", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-
-                return true;
+                else
+                {
+                    ComControlPort.Open();
+                }
             }
-            else
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
+                MessageBox.Show("COM Control: " + ComControl + " not connect. Please check connect the device !", "Error device", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            return true;
         }
+
 
         public bool Init()
         {
             try
             {
                 IdLine = Common.GetValueRegistryKey(PathConfig, "id");
-                // NameLine = Common.GetValueRegistryKey(PathConfig, "nameLine")
                 STATION = Common.GetValueRegistryKey(PathConfig, "station");
-                STATION_BEFORE = Common.GetValueRegistryKey(PathConfig, "stationBefore");
-                // dirWip = Path.Combine(Common.GetValueRegistryKey(PathConfig, "pathWip"), "backup")
                 pathBackup = Path.Combine(Common.GetValueRegistryKey(PathConfig, "pathWip"), "backup", DateTime.Now.ToString("yyyyMMdd"));
                 pathWip = Common.GetValueRegistryKey(PathConfig, "pathWip");
-            
-            if (!Directory.Exists(pathBackup))
-                Directory.CreateDirectory(pathBackup);
-            if (!Directory.Exists(Path.Combine(pathBackup, "OK")))
-                Directory.CreateDirectory(Path.Combine(pathBackup, "OK"));
-            if (!Directory.Exists(Path.Combine(pathBackup, "NG")))
-                Directory.CreateDirectory(Path.Combine(pathBackup, "NG"));
-            // If Directory.Exists(dirWip) = False Then Directory.CreateDirectory(dirWip)
-            if (Directory.Exists(PathReport) == false)
-                Directory.CreateDirectory(PathReport);
-            if (Directory.Exists(pathConfirm) == false)
-                Directory.CreateDirectory(pathConfirm);
-            txtLine.Text = Common.GetValueRegistryKey(PathConfig, "nameLine");
+
+                if (!Directory.Exists(pathBackup))
+                    Directory.CreateDirectory(pathBackup);
+                if (!Directory.Exists(Path.Combine(pathBackup, "OK")))
+                    Directory.CreateDirectory(Path.Combine(pathBackup, "OK"));
+                if (!Directory.Exists(Path.Combine(pathBackup, "NG")))
+                    Directory.CreateDirectory(Path.Combine(pathBackup, "NG"));
+                if (Directory.Exists(PathReport) == false)
+                    Directory.CreateDirectory(PathReport);
+                if (Directory.Exists(pathConfirm) == false)
+                    Directory.CreateDirectory(pathConfirm);
+                txtLine.Text = Common.GetValueRegistryKey(PathConfig, "nameLine");
             }
             catch (Exception e)
             {
@@ -340,14 +239,15 @@ namespace Line_Production
                         IdCodeLenght = short.Parse(ReadTextFile(PathModelCurrent, 12));
                         ModelRevPosition = int.Parse(ReadTextFile(PathModelCurrent, 14));
                         ModelRev = ReadTextFile(PathModelCurrent, 16);
-                      //  PCBBOX = int.Parse(ReadTextFile(PathModelCurrent, 18));
+                        //  PCBBOX = int.Parse(ReadTextFile(PathModelCurrent, 18));
                         ConfirmModel = ReadTextFile(PathModelCurrent, 20) == "1" ? true : false;
-                    }catch(Exception e)
+                    }
+                    catch (Exception e)
                     {
                         MessageBox.Show(e.Message.ToString());
                         return false;
                     }
-                    
+
                     return true;
                 }
                 else

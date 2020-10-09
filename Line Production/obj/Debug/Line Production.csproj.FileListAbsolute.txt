@@ -45,3 +45,4 @@ D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Produc
 D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.csproj.CopyComplete
 D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.exe
 D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.pdb
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.csprojAssemblyReference.cache

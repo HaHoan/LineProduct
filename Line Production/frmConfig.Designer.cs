@@ -48,6 +48,8 @@ namespace Line_Production
             this.txtId = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.btnSaveChanged = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbbCOM = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // chkWip
@@ -55,7 +57,7 @@ namespace Line_Production
             this.chkWip.AutoSize = true;
             this.chkWip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkWip.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.chkWip.Location = new System.Drawing.Point(87, 171);
+            this.chkWip.Location = new System.Drawing.Point(87, 207);
             this.chkWip.Name = "chkWip";
             this.chkWip.Size = new System.Drawing.Size(109, 17);
             this.chkWip.TabIndex = 2;
@@ -143,7 +145,7 @@ namespace Line_Production
             this.btnSaveChanged.ForeColor = System.Drawing.Color.White;
             this.btnSaveChanged.Image = global::Line_Production.Properties.Resources.Save;
             this.btnSaveChanged.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveChanged.Location = new System.Drawing.Point(215, 211);
+            this.btnSaveChanged.Location = new System.Drawing.Point(87, 243);
             this.btnSaveChanged.Name = "btnSaveChanged";
             this.btnSaveChanged.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnSaveChanged.Size = new System.Drawing.Size(118, 30);
@@ -153,12 +155,32 @@ namespace Line_Production
             this.btnSaveChanged.UseVisualStyleBackColor = false;
             this.btnSaveChanged.Click += new System.EventHandler(this.btnSaveChanged_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "COM";
+            // 
+            // cbbCOM
+            // 
+            this.cbbCOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCOM.FormattingEnabled = true;
+            this.cbbCOM.Location = new System.Drawing.Point(87, 167);
+            this.cbbCOM.Name = "cbbCOM";
+            this.cbbCOM.Size = new System.Drawing.Size(121, 21);
+            this.cbbCOM.TabIndex = 38;
+            // 
             // frmConfig
             // 
             this.AcceptButton = this.btnSaveChanged;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 259);
+            this.ClientSize = new System.Drawing.Size(350, 308);
+            this.Controls.Add(this.cbbCOM);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.Label5);
             this.Controls.Add(this.txtStation);
@@ -193,5 +215,7 @@ namespace Line_Production
         internal Label Label3;
         internal TextBox txtId;
         internal Label Label5;
+        private Label label4;
+        private ComboBox cbbCOM;
     }
 }
