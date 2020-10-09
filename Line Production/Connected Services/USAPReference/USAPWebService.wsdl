@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetByBcNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BC_NO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetByBcNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetByBcNoResult" type="tns:BCLBFLMEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BCLBFLMEntity">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseEntity">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="BC_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BC_TYPE" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="REQ_DATE" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="TN_NO" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TN_LINE" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="PART_NO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MPN_NO" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="REQ_QTY" nillable="true" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="OS_QTY" nillable="true" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="PO_NO" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PO_LINE" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="VEN_CODE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VEN_BRCD" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DATE_CODE" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PRN_COUNT" nillable="true" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="BC_SITE" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="WH_CODE" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ISS_DATE" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="RQC_DATE" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="UPD_USER" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UPD_DATE" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="WH_LOC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VEN_LTNO" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MAKE_DATE" nillable="true" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseEntity" />
+      <s:element name="GetActualProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActualProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActualProductResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActualProductWidthKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActualProductWidthKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActualProductWidthKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetByIssueSheet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="issue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetByIssueSheetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetByIssueSheetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListReport">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetListReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataPoints">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataPointsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataPointsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataPointConfirms">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataPointConfirmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataPointConfirmsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Daily">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="input" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DailyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DailyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Monthly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="input" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MonthlyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MonthlyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetByBcNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetByBcNo" />
+  </wsdl:message>
+  <wsdl:message name="GetByBcNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetByBcNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActualProductSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActualProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetActualProductSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActualProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActualProductWidthKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetActualProductWidthKey" />
+  </wsdl:message>
+  <wsdl:message name="GetActualProductWidthKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetActualProductWidthKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetByIssueSheetSoapIn">
+    <wsdl:part name="parameters" element="tns:GetByIssueSheet" />
+  </wsdl:message>
+  <wsdl:message name="GetByIssueSheetSoapOut">
+    <wsdl:part name="parameters" element="tns:GetByIssueSheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListReport" />
+  </wsdl:message>
+  <wsdl:message name="GetListReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPointsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataPoints" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPointsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPointConfirmsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataPointConfirms" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPointConfirmsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataPointConfirmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DailySoapIn">
+    <wsdl:part name="parameters" element="tns:Daily" />
+  </wsdl:message>
+  <wsdl:message name="DailySoapOut">
+    <wsdl:part name="parameters" element="tns:DailyResponse" />
+  </wsdl:message>
+  <wsdl:message name="MonthlySoapIn">
+    <wsdl:part name="parameters" element="tns:Monthly" />
+  </wsdl:message>
+  <wsdl:message name="MonthlySoapOut">
+    <wsdl:part name="parameters" element="tns:MonthlyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="USAPWebServiceSoap">
+    <wsdl:operation name="GetByBcNo">
+      <wsdl:input message="tns:GetByBcNoSoapIn" />
+      <wsdl:output message="tns:GetByBcNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActualProduct">
+      <wsdl:input message="tns:GetActualProductSoapIn" />
+      <wsdl:output message="tns:GetActualProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActualProductWidthKey">
+      <wsdl:input message="tns:GetActualProductWidthKeySoapIn" />
+      <wsdl:output message="tns:GetActualProductWidthKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByIssueSheet">
+      <wsdl:input message="tns:GetByIssueSheetSoapIn" />
+      <wsdl:output message="tns:GetByIssueSheetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListReport">
+      <wsdl:input message="tns:GetListReportSoapIn" />
+      <wsdl:output message="tns:GetListReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoints">
+      <wsdl:input message="tns:GetDataPointsSoapIn" />
+      <wsdl:output message="tns:GetDataPointsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPointConfirms">
+      <wsdl:input message="tns:GetDataPointConfirmsSoapIn" />
+      <wsdl:output message="tns:GetDataPointConfirmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Daily">
+      <wsdl:input message="tns:DailySoapIn" />
+      <wsdl:output message="tns:DailySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Monthly">
+      <wsdl:input message="tns:MonthlySoapIn" />
+      <wsdl:output message="tns:MonthlySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="USAPWebServiceSoap" type="tns:USAPWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetByBcNo">
+      <soap:operation soapAction="http://tempuri.org/GetByBcNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActualProduct">
+      <soap:operation soapAction="http://tempuri.org/GetActualProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActualProductWidthKey">
+      <soap:operation soapAction="http://tempuri.org/GetActualProductWidthKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByIssueSheet">
+      <soap:operation soapAction="http://tempuri.org/GetByIssueSheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListReport">
+      <soap:operation soapAction="http://tempuri.org/GetListReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoints">
+      <soap:operation soapAction="http://tempuri.org/GetDataPoints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPointConfirms">
+      <soap:operation soapAction="http://tempuri.org/GetDataPointConfirms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Daily">
+      <soap:operation soapAction="http://tempuri.org/Daily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Monthly">
+      <soap:operation soapAction="http://tempuri.org/Monthly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="USAPWebServiceSoap12" type="tns:USAPWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetByBcNo">
+      <soap12:operation soapAction="http://tempuri.org/GetByBcNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActualProduct">
+      <soap12:operation soapAction="http://tempuri.org/GetActualProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActualProductWidthKey">
+      <soap12:operation soapAction="http://tempuri.org/GetActualProductWidthKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByIssueSheet">
+      <soap12:operation soapAction="http://tempuri.org/GetByIssueSheet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListReport">
+      <soap12:operation soapAction="http://tempuri.org/GetListReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoints">
+      <soap12:operation soapAction="http://tempuri.org/GetDataPoints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPointConfirms">
+      <soap12:operation soapAction="http://tempuri.org/GetDataPointConfirms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Daily">
+      <soap12:operation soapAction="http://tempuri.org/Daily" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Monthly">
+      <soap12:operation soapAction="http://tempuri.org/Monthly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="USAPWebService">
+    <wsdl:port name="USAPWebServiceSoap" binding="tns:USAPWebServiceSoap">
+      <soap:address location="http://172.28.10.17:99/Service/USAPWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="USAPWebServiceSoap12" binding="tns:USAPWebServiceSoap12">
+      <soap12:address location="http://172.28.10.17:99/Service/USAPWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

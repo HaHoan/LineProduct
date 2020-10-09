@@ -45,8 +45,6 @@ namespace Line_Production
             this.txtLine = new System.Windows.Forms.TextBox();
             this.txtStation = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
-            this.txtStationBefore = new System.Windows.Forms.TextBox();
-            this.Label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.btnSaveChanged = new System.Windows.Forms.Button();
@@ -57,7 +55,7 @@ namespace Line_Production
             this.chkWip.AutoSize = true;
             this.chkWip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkWip.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.chkWip.Location = new System.Drawing.Point(87, 200);
+            this.chkWip.Location = new System.Drawing.Point(87, 171);
             this.chkWip.Name = "chkWip";
             this.chkWip.Size = new System.Drawing.Size(109, 17);
             this.chkWip.TabIndex = 2;
@@ -121,22 +119,6 @@ namespace Line_Production
             this.Label3.TabIndex = 31;
             this.Label3.Text = "Station";
             // 
-            // txtStationBefore
-            // 
-            this.txtStationBefore.Location = new System.Drawing.Point(87, 164);
-            this.txtStationBefore.Name = "txtStationBefore";
-            this.txtStationBefore.Size = new System.Drawing.Size(205, 20);
-            this.txtStationBefore.TabIndex = 34;
-            // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(12, 171);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(74, 13);
-            this.Label4.TabIndex = 33;
-            this.Label4.Text = "Station Before";
-            // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(87, 24);
@@ -161,7 +143,7 @@ namespace Line_Production
             this.btnSaveChanged.ForeColor = System.Drawing.Color.White;
             this.btnSaveChanged.Image = global::Line_Production.Properties.Resources.Save;
             this.btnSaveChanged.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveChanged.Location = new System.Drawing.Point(215, 243);
+            this.btnSaveChanged.Location = new System.Drawing.Point(215, 211);
             this.btnSaveChanged.Name = "btnSaveChanged";
             this.btnSaveChanged.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnSaveChanged.Size = new System.Drawing.Size(118, 30);
@@ -176,11 +158,9 @@ namespace Line_Production
             this.AcceptButton = this.btnSaveChanged;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 285);
+            this.ClientSize = new System.Drawing.Size(350, 259);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.Label5);
-            this.Controls.Add(this.txtStationBefore);
-            this.Controls.Add(this.Label4);
             this.Controls.Add(this.txtStation);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.txtLine);
@@ -211,8 +191,6 @@ namespace Line_Production
         internal TextBox txtLine;
         internal TextBox txtStation;
         internal Label Label3;
-        internal TextBox txtStationBefore;
-        internal Label Label4;
         internal TextBox txtId;
         internal Label Label5;
     }

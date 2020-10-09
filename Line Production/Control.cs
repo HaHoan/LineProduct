@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using Line_Production.Database;
 using Line_Production.Entities;
 using Microsoft.VisualBasic; // Install-Package Microsoft.VisualBasic
 using Microsoft.VisualBasic.CompilerServices; // Install-Package Microsoft.VisualBasic
@@ -21,6 +22,7 @@ namespace Line_Production
         [DllImport("user32.dll", SetLastError = true)]
         static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
         private PVSReference.PVSWebServiceSoapClient pvsservice;
+        private USAPReference.USAPWebServiceSoapClient usapservice = new USAPReference.USAPWebServiceSoapClient();
         private LineProductWebServiceReference.LineProductRealtimeWebServiceSoapClient _lineproduct_service = new LineProductWebServiceReference.LineProductRealtimeWebServiceSoapClient();
         private LineProductWebServiceReference.tbl_Product_RealtimeEntity _entity = new LineProductWebServiceReference.tbl_Product_RealtimeEntity();
         private DateTime time_scanBarcode;
@@ -218,9 +220,9 @@ namespace Line_Production
                 ProductPlanBegin = int.Parse(ReadTextFile(fileload, 2));
                 ProductPlan = int.Parse(ReadTextFile(fileload, 2));
                 CountProduct = int.Parse(ReadTextFile(fileload, 4));
-                IDCount = int.Parse(ReadTextFile(fileload, 26));
-                IDCount_box = int.Parse(ReadTextFile(fileload, 28));
-                Box_curent = ReadTextFile(fileload, 30);
+                IDCount = 0;
+                IDCount_box = 0;
+                Box_curent = "";
                 TimeCycleActual = int.Parse(ReadTextFile(fileload, 32));
                 for (int index = 1; index <= 10; index++)
                 {
@@ -369,7 +371,7 @@ namespace Line_Production
                     TextCycleTimeModel.Text = CycleTimeModel.ToString();
                     TextCycleTimeCurrent.Text = "";
                     txtPeople.Text = NoPeople.ToString();
-                    LabelPCS1BOX.Text = PCBBOX.ToString();
+
                     FormatNgayCasx();
                     BtStart.Enabled = true;
                     BtStop.Enabled = true;
@@ -382,11 +384,7 @@ namespace Line_Production
                     txtActual.Text = CountProduct.ToString();
                     TextBalance.Text = Math.Abs(CountProduct - ProductPlanBegin).ToString();
                     lblQuantity.Text = CountProduct.ToString();
-                    LabelPCBA.Text = IDCount.ToString();
-                    LabelSoThung.Text = IDCount_box.ToString();
-                    TextMacBox.Text = Box_curent;
                     TextCycleTimeCurrent.Text = Math.Round((double)TimeCycleActual / CountProduct, 1, MidpointRounding.AwayFromZero).ToString();
-                    TextMacBox.Focus();
                     if (CheckCaSX() == true)
                     {
                         txtShift.Text = "Ca Ngày";
@@ -508,7 +506,7 @@ namespace Line_Production
             LabelShapeOnline.Visible = true;
             LabelShapeOffLine.Visible = false;
             LabelShapeError.Visible = false;
-            btDTle.Visible = true;
+            btDTle.Visible = false;
             Shape1.Visible = false;
             Shape2.Visible = false;
             Shape3.Visible = false;
@@ -567,34 +565,9 @@ namespace Line_Production
                 ProductPlan = (int)Math.Round(TimeCycleActual / CycleTimeModel, 0, MidpointRounding.AwayFromZero);
                 txtPlan.Text = ProductPlan.ToString();
             }
+            TextMacBox.Enabled = true;
+            TextMacBox.Focus();
 
-            if (BarcodeEnable == true)
-            {
-                if (IDCount != 0)
-                {
-                    if (ConfirmModel)
-                    {
-                        txtConfirm.Enabled = true;
-                        txtConfirm.Focus();
-                    }
-                    else
-                    {
-                        txtSerial.Enabled = true;
-                        txtSerial.Focus();
-                    }
-
-                    TextMacBox.Enabled = false;
-                }
-                else
-                {
-                    TextMacBox.Focus();
-                }
-            }
-            else
-            {
-                TextMacBox.Enabled = false;
-                btDTle.Enabled = false;
-            }
         }
 
         private void BtStop_Click(object sender, EventArgs e)
@@ -747,7 +720,7 @@ namespace Line_Production
                 //{
                 //    perBalanceProduction = ProductPlan == 0 ? 0 : BalanceProduction / ProductPlan * 100;
                 //}
-                var perBalanceProduction = ProductPlan == 0 ? 0 : BalanceProduction *100 / ProductPlan;
+                var perBalanceProduction = ProductPlan == 0 ? 0 : BalanceProduction * 100 / ProductPlan;
                 // Console.WriteLine("perBanlanceProduction: {0}, BalanceErrorSetup: {1}, BalanceAlarmSetup: {2}", perBalanceProduction, BalanceErrorSetup, BalanceAlarmSetup)
                 if (perBalanceProduction < BalanceErrorSetup)
                 {
@@ -889,6 +862,8 @@ namespace Line_Production
             }
         }
 
+        // Kiểm tra xem thùng đã đầy chưa
+
         public bool CheckMacBox(string Idcheck)
         {
             string FileReport = PathReport + @"\" + ModelCurrent + @"\" + Datecheck + ".csv";
@@ -955,7 +930,24 @@ namespace Line_Production
                                     Thread.Sleep(300);
                                     SendKeys.SendWait("{Enter}");
                                     Thread.Sleep(200);
+                                    bool IsWipSuccess = false;
+                                    for (int i = 0; i < 10; i++)
+                                    {
+                                        if (pvsservice.GetWorkOrderItem(txtSerial.Text, STATION) != null)
+                                        {
+                                            IsWipSuccess = true;
+                                            break;
+                                        }
+                                        Thread.Sleep(500);
+                                    }
                                     SendKeys.SendWait("%{TAB}");
+                                    if (!IsWipSuccess)
+                                    {
+                                        txtSerial.SelectAll();
+                                        txtSerial.Focus();
+                                        return;
+                                    }
+                                    
                                     string FileReport = PathReport + @"\" + ModelCurrent + @"\" + Datecheck + ".csv";
                                     var content = new StringBuilder();
                                     if (File.Exists(FileReport) == false)
@@ -965,49 +957,51 @@ namespace Line_Production
 
                                     content.AppendLine(string.Join(",", CountProduct, DateAndTime.Now.Hour + ":" + DateAndTime.Now.Minute, IDCount, MacCurrent, txtSerial.Text, lblCode.Text));
                                     Common.WriteLog(FileReport, content);
-                                    IDCount += 1;
-                                    if (IDCount == PCBBOX)
+                                    KiemTraTrenHondaLock(() =>
                                     {
-                                        if (CheckBox1.Checked)
+                                        IDCount += 1;
+                                        if (IDCount == PCBBOX)
                                         {
-                                            TextMacBox.Enabled = true;
-                                            TextMacBox.Focus();
+                                            if (CheckBox1.Checked)
+                                            {
+                                                TextMacBox.Enabled = true;
+                                                TextMacBox.Focus();
+                                                txtSerial.Enabled = false;
+                                                TextMacBox.Clear();
+                                            }
+                                            else
+                                            {
+                                                txtSerial.Focus();
+                                            }
+
+                                            IDCount = 0;
+                                            IDCount_box += 1;
+                                            Box_curent = "";
+                                        }
+
+                                        LabelPCBA.Text = IDCount.ToString();
+                                        LabelSoThung.Text = IDCount_box.ToString();
+                                        IncreaseProduct();
+                                        if (ConfirmModel & IDCount != 0)
+                                        {
+                                            txtConfirm.Enabled = true;
+                                            txtConfirm.SelectAll();
+                                            txtConfirm.Focus();
                                             txtSerial.Enabled = false;
-                                            TextMacBox.Clear();
-                                        }
-                                        else
-                                        {
-                                            txtSerial.Focus();
                                         }
 
-                                        IDCount = 0;
-                                        IDCount_box += 1;
-                                        Box_curent = "";
-                                    }
-
-                                    LabelPCBA.Text = IDCount.ToString();
-                                    LabelSoThung.Text = IDCount_box.ToString();
-                                    IncreaseProduct();
-                                    if (ConfirmModel & IDCount != 0)
+                                    }, () =>
                                     {
-                                        txtConfirm.Enabled = true;
-                                        txtConfirm.SelectAll();
-                                        txtConfirm.Focus();
-                                        txtSerial.Enabled = false;
-                                    }
+                                        txtSerial.Focus();
+                                    });
+
                                 }
                             }
                             else if (useWip == false)
                             {
                                 string FileReport = PathReport + @"\" + ModelCurrent + @"\" + Datecheck + ".csv";
-                                if (CheckIDExistEx(txtSerial.Text))
-                                {
-                                    NG_FORM NG_FORM = new NG_FORM();
-                                    NG_FORM.Lb_inform_NG.Text = "Đã tồn tại bản mạch " + txtSerial.Text;
-                                    NG_FORM.GroupBox3.Visible = false;
-                                    NG_FORM.ShowDialog();
-                                }
-                                else
+
+                                KiemTraTrenHondaLock(() =>
                                 {
                                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
                                     var content = new StringBuilder();
@@ -1049,101 +1043,70 @@ namespace Line_Production
                                         txtConfirm.Focus();
                                         txtSerial.Enabled = false;
                                     }
-                                }
+                                }, () => { });
+
+                                //}
                             }
                             else
                             {
                                 try
                                 {
-                                    var workOrderItem = new PVSReference.WORK_ORDER_ITEMSEntity();
-                                    workOrderItem = pvsservice.GetWorkOrderItem(txtSerial.Text, STATION);
                                     string FileReport = PathReport + @"\" + ModelCurrent + @"\" + Datecheck + ".csv";
+
                                     /* TODO ERROR: Skipped RegionDirectiveTrivia */
-                                    if (workOrderItem is null)
+                                    var _content = new StringBuilder();
+                                    if (File.Exists(FileReport) == false)
                                     {
-                                        var cameraItem = new PVSReference.WORK_ORDER_ITEMSEntity();
-                                        try
-                                        {
-                                            cameraItem = pvsservice.GetWorkOrderItem(txtSerial.Text, STATION_BEFORE);
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            MessageBox.Show("Kết nối đến server thất bại !", "Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                            return;
-                                        }
+                                        _content.AppendLine("No,Time,NoPCBA,MAC Box,Id PCBA,User");
+                                    }
 
-                                        if (cameraItem is null)
+                                    _content.AppendLine(string.Join(",", CountProduct, DateAndTime.Now.Hour + ":" + DateAndTime.Now.Minute, IDCount, MacCurrent, txtSerial.Text, lblCode.Text));
+                                    Common.WriteLog(FileReport, _content);
+
+                                    var contentWip = new StringBuilder();
+                                    string sTime = pvsservice.GetDateTime().ToString("yyMMddHHmmss");
+                                    if (Directory.Exists(PathReport + @"\" + ModelCurrent) == false)
+                                        Directory.CreateDirectory(PathReport + @"\" + ModelCurrent);
+                                    contentWip.AppendLine(string.Join("|", cbbModel.Text, txtSerial.Text, sTime, State.P.ToString(), STATION));
+                                    Common.WriteLog(Path.Combine(pathWip, $"{sTime}_{txtSerial.Text.Trim()}.txt"), contentWip);
+                                    Common.WriteLog(Path.Combine(pathBackup, "OK", $"{sTime}_{txtSerial.Text.Trim()}.txt"), contentWip);
+
+                                    KiemTraTrenHondaLock(() =>
+                                    {
+                                        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+                                        IDCount += 1;
+                                        if (IDCount == PCBBOX)
                                         {
-                                            NG_FORM NG_FORM = new NG_FORM();
-                                            NG_FORM.Lb_inform_NG.Text = "Chưa bắn trạm " + STATION_BEFORE;
-                                            NG_FORM.GroupBox3.Visible = false;
-                                            // NG_FORM.ControlBox = False
-                                            // NG_FORM.ShowInTaskbar = False
-                                            NG_FORM.ShowDialog();
-                                        }
-                                        else
-                                        {
-                                            /* TODO ERROR: Skipped RegionDirectiveTrivia */
-                                            var _content = new StringBuilder();
-                                            if (File.Exists(FileReport) == false)
+                                            if (CheckBox1.Checked)
                                             {
-                                                _content.AppendLine("No,Time,NoPCBA,MAC Box,Id PCBA,User");
-                                            }
-
-                                            _content.AppendLine(string.Join(",", CountProduct, DateAndTime.Now.Hour + ":" + DateAndTime.Now.Minute, IDCount, MacCurrent, txtSerial.Text, lblCode.Text));
-                                            Common.WriteLog(FileReport, _content);
-                                            /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                                            IDCount += 1;
-                                            // LabelPCBA.Text = IDCount
-                                            // LabelSoThung.Text = IDCount_box
-                                            // IncreaseProduct()
-                                            if (IDCount == PCBBOX)
-                                            {
-                                                if (CheckBox1.Checked)
-                                                {
-                                                    TextMacBox.Enabled = true;
-                                                    TextMacBox.Focus();
-                                                    txtSerial.Enabled = false;
-                                                    TextMacBox.Clear();
-                                                }
-                                                else
-                                                {
-                                                    txtSerial.Focus();
-                                                }
-
-                                                IDCount = 0;
-                                                IDCount_box += 1;
-                                                Box_curent = "";
-                                            }
-
-                                            LabelPCBA.Text = IDCount.ToString();
-                                            LabelSoThung.Text = IDCount_box.ToString();
-                                            IncreaseProduct();
-                                            if (ConfirmModel & IDCount != 0)
-                                            {
-                                                txtConfirm.Enabled = true;
-                                                txtConfirm.SelectAll();
-                                                txtConfirm.Focus();
+                                                TextMacBox.Enabled = true;
+                                                TextMacBox.Focus();
                                                 txtSerial.Enabled = false;
+                                                TextMacBox.Clear();
+                                            }
+                                            else
+                                            {
+                                                txtSerial.Focus();
                                             }
 
-                                            var contentWip = new StringBuilder();
-                                            string sTime = pvsservice.GetDateTime().ToString("yyMMddHHmmss");
-                                            if (Directory.Exists(PathReport + @"\" + ModelCurrent) == false)
-                                                Directory.CreateDirectory(PathReport + @"\" + ModelCurrent);
-                                            contentWip.AppendLine(string.Join("|", cbbModel.Text, txtSerial.Text, sTime, State.P.ToString(), STATION));
-                                            Common.WriteLog(Path.Combine(pathWip, $"{sTime}_{txtSerial.Text.Trim()}.txt"), contentWip);
-                                            Common.WriteLog(Path.Combine(pathBackup, "OK", $"{sTime}_{txtSerial.Text.Trim()}.txt"), contentWip);
+                                            IDCount = 0;
+                                            IDCount_box += 1;
+                                            Box_curent = "";
                                         }
-                                    }
-                                    /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-                                    else
-                                    {
-                                        NG_FORM NG_FORM = new NG_FORM();
-                                        NG_FORM.Lb_inform_NG.Text = "Đã tồn tại bản mạch " + txtSerial.Text;
-                                        NG_FORM.GroupBox3.Visible = false;
-                                        NG_FORM.ShowDialog();
-                                    }
+
+                                        LabelPCBA.Text = IDCount.ToString();
+                                        LabelSoThung.Text = IDCount_box.ToString();
+                                        IncreaseProduct();
+                                        if (ConfirmModel & IDCount != 0)
+                                        {
+                                            txtConfirm.Enabled = true;
+                                            txtConfirm.SelectAll();
+                                            txtConfirm.Focus();
+                                            txtSerial.Enabled = false;
+                                        }
+
+                                    }, () => { });
+
                                 }
                                 catch (Exception ex)
                                 {
@@ -1152,6 +1115,7 @@ namespace Line_Production
                                 }
                                 /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
                             }
+
                         }
                         else
                         {
@@ -1186,56 +1150,107 @@ namespace Line_Production
             }
         }
 
+        private void KiemTraTrenHondaLock(Action ChuaTonTai, Action DaTonTai)
+        {
+            // Check trên HondaLock
+            if (DataProvider.Instance.HondaLocks.KiemTraBanMachDaBan(TextMacBox.Text.ToString(), txtSerial.Text.ToString()))
+            {
+                DaTonTai();
+                NG_FORM NG_FORM = new NG_FORM();
+                NG_FORM.Lb_inform_NG.Text = "Đã tồn tại bản mạch " + txtSerial.Text;
+                NG_FORM.GroupBox3.Visible = false;
+                NG_FORM.ShowDialog();
+            }
+            else
+            {
+                DataProvider.Instance.HondaLocks.Insert(new HondaLock()
+                {
+                    ProductionID = cbbModel.Text.ToString(),
+                    BoxID = TextMacBox.Text,
+                    BoardNo = txtSerial.Text,
+                    UpdateTime = pvsservice.GetDateTime(),
+                    Status = chkOK.Checked ? "1" : "0",
+                    Update_Code = lblCode.Text,
+                    Update_Name = lUser.Text
+                });
+
+                ChuaTonTai();
+            }
+        }
+
+        private int LaySoThung(string mathung)
+        {
+            var bc = usapservice.GetByBcNo(TextMacBox.Text.ToString());
+            if (bc != null)
+            {
+                try
+                {
+                    return (int)bc.OS_QTY;
+                }
+                catch
+                {
+                    return -1;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
         private void TextMacBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == '\r')
             {
-                if (Strings.Mid(TextMacBox.Text.ToUpper(), 1, 2) == "F0")
-                {
-                    if (CheckMacBox(TextMacBox.Text) == false)
-                    {
-                        MacCurrent = TextMacBox.Text.Trim().TrimEnd().TrimStart();
-                        TextMacBox.Enabled = false;
-                        if (ConfirmModel)
-                        {
-                            txtConfirm.Enabled = true;
-                            txtConfirm.SelectAll();
-                            txtConfirm.Focus();
-                        }
-                        else
-                        {
-                            txtSerial.Enabled = true;
-                            txtSerial.Focus();
-                        }
 
-                        CheckBox1.Enabled = false;
-                        IDCount = 0;
-                        // IDCount_box += 1
-                        LabelSoThung.Text = IDCount_box.ToString();
-                        LabelPCBA.Text = IDCount.ToString();
-                        Box_curent = TextMacBox.Text;
-                    }
-                    else
-                    {
-                        NG_FORM NG_FORM = new NG_FORM();
-                        NG_FORM.Show();
-                        NG_FORM.Lb_inform_NG.Text = "Mac " + TextMacBox.Text + " da ton tai";
-                        NG_FORM.GroupBox3.Visible = false;
-                        NG_FORM.GroupBox3.Enabled = false;
-                        NG_FORM.ControlBox = true;
-                        TextMacBox.SelectAll();
-                    }
-                }
-                else
+                MacCurrent = TextMacBox.Text.Trim().TrimEnd().TrimStart();
+                IDCount = DataProvider.Instance.HondaLocks.SoLuongBanMachDaDem(MacCurrent, cbbModel.Text);
+                PCBBOX = LaySoThung(TextMacBox.Text);
+                if (PCBBOX < 0)
                 {
                     NG_FORM NG_FORM = new NG_FORM();
                     NG_FORM.Show();
-                    NG_FORM.Lb_inform_NG.Text = "Mac " + TextMacBox.Text + " không có kí tự F0 !";
+                    NG_FORM.Lb_inform_NG.Text = "Mã thùng không tồn tại";
                     NG_FORM.GroupBox3.Visible = false;
                     NG_FORM.GroupBox3.Enabled = false;
                     NG_FORM.ControlBox = true;
                     TextMacBox.SelectAll();
+                    return;
                 }
+                else if (IDCount == PCBBOX)
+                {
+                    NG_FORM NG_FORM = new NG_FORM();
+                    NG_FORM.Show();
+                    NG_FORM.Lb_inform_NG.Text = "Thùng đã kiểm tra xong";
+                    NG_FORM.GroupBox3.Visible = false;
+                    NG_FORM.GroupBox3.Enabled = false;
+                    NG_FORM.ControlBox = true;
+                    TextMacBox.SelectAll();
+                    return;
+                }
+                else
+                {
+                    LabelPCS1BOX.Text = PCBBOX.ToString();
+                }
+
+                TextMacBox.Enabled = false;
+                if (ConfirmModel)
+                {
+                    txtConfirm.Enabled = true;
+                    txtConfirm.SelectAll();
+                    txtConfirm.Focus();
+                }
+                else
+                {
+                    txtSerial.Enabled = true;
+                    txtSerial.Focus();
+                }
+
+                CheckBox1.Enabled = false;
+                LabelPCBA.Text = IDCount.ToString();
+                //Box_curent = TextMacBox.Text;
+
+
+
             }
         }
 
@@ -1291,7 +1306,7 @@ namespace Line_Production
             }
         }
 
-        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             var listReport = new List<ObjReport>();
             if (e.KeyChar == 13)

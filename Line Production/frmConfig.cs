@@ -24,7 +24,7 @@ namespace Line_Production
             Common.WriteRegistry(Constants.PathConfig, "useWip", chkWip.Checked.ToString());
             Common.WriteRegistry(Constants.PathConfig, "pathWip", txtLog.Text);
             Common.WriteRegistry(Constants.PathConfig, "station", txtStation.Text.Trim());
-            Common.WriteRegistry(Constants.PathConfig, "stationBefore", txtStationBefore.Text.Trim());
+           // Common.WriteRegistry(Constants.PathConfig, "stationBefore", txtStationBefore.Text.Trim());
             var confirm = MessageBox.Show("Save success!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (confirm == DialogResult.OK)
             {
@@ -44,7 +44,7 @@ namespace Line_Production
             txtLog.Text = Common.GetValueRegistryKey(Constants.PathConfig, "pathWip");
             txtLine.Text = Common.GetValueRegistryKey(Constants.PathConfig, "nameLine");
             txtStation.Text = Common.GetValueRegistryKey(Constants.PathConfig, "station");
-            txtStationBefore.Text = Common.GetValueRegistryKey(Constants.PathConfig, "stationBefore");
+           // txtStationBefore.Text = Common.GetValueRegistryKey(Constants.PathConfig, "stationBefore");
 
             // txtLine.Text = NameLine
             // txtStation.Text = STATION

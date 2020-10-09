@@ -4791,314 +4791,183 @@ namespace Line_Production.PVSReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMac", ReplyAction="*")]
         Line_Production.PVSReference.GetMacResponse GetMac(Line_Production.PVSReference.GetMacRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMac", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetMacResponse> GetMacAsync(Line_Production.PVSReference.GetMacRequest request);
-        
         // CODEGEN: Generating message contract since element name boxID from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoGetMac", ReplyAction="*")]
         Line_Production.PVSReference.KyoGetMacResponse KyoGetMac(Line_Production.PVSReference.KyoGetMacRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoGetMac", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoGetMacResponse> KyoGetMacAsync(Line_Production.PVSReference.KyoGetMacRequest request);
         
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoGetBoard", ReplyAction="*")]
         Line_Production.PVSReference.KyoGetBoardResponse KyoGetBoard(Line_Production.PVSReference.KyoGetBoardRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoGetBoard", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoGetBoardResponse> KyoGetBoardAsync(Line_Production.PVSReference.KyoGetBoardRequest request);
-        
         // CODEGEN: Generating message contract since element name key from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoSaveBoard", ReplyAction="*")]
         Line_Production.PVSReference.KyoSaveBoardResponse KyoSaveBoard(Line_Production.PVSReference.KyoSaveBoardRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoSaveBoard", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoSaveBoardResponse> KyoSaveBoardAsync(Line_Production.PVSReference.KyoSaveBoardRequest request);
         
         // CODEGEN: Generating message contract since element name key from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoRemoveBoard", ReplyAction="*")]
         Line_Production.PVSReference.KyoRemoveBoardResponse KyoRemoveBoard(Line_Production.PVSReference.KyoRemoveBoardRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/KyoRemoveBoard", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoRemoveBoardResponse> KyoRemoveBoardAsync(Line_Production.PVSReference.KyoRemoveBoardRequest request);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetDateTime", ReplyAction="*")]
         System.DateTime GetDateTime();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetDateTime", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.DateTime> GetDateTimeAsync();
         
         // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CheckUserLogin", ReplyAction="*")]
         Line_Production.PVSReference.CheckUserLoginResponse CheckUserLogin(Line_Production.PVSReference.CheckUserLoginRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CheckUserLogin", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.CheckUserLoginResponse> CheckUserLoginAsync(Line_Production.PVSReference.CheckUserLoginRequest request);
-        
         // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserByID", ReplyAction="*")]
         Line_Production.PVSReference.GetUserByIDResponse GetUserByID(Line_Production.PVSReference.GetUserByIDRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserByID", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetUserByIDResponse> GetUserByIDAsync(Line_Production.PVSReference.GetUserByIDRequest request);
         
         // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserToJsonByID", ReplyAction="*")]
         Line_Production.PVSReference.GetUserToJsonByIDResponse GetUserToJsonByID(Line_Production.PVSReference.GetUserToJsonByIDRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserToJsonByID", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetUserToJsonByIDResponse> GetUserToJsonByIDAsync(Line_Production.PVSReference.GetUserToJsonByIDRequest request);
-        
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBoardBinStatusByBoardNo", ReplyAction="*")]
         Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse GetBoardBinStatusByBoardNo(Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBoardBinStatusByBoardNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse> GetBoardBinStatusByBoardNoAsync(Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequest request);
         
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBoardBinStatusByBoardNoAndOrderNo", ReplyAction="*")]
         Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoResponse GetBoardBinStatusByBoardNoAndOrderNo(Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBoardBinStatusByBoardNoAndOrderNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoResponse> GetBoardBinStatusByBoardNoAndOrderNoAsync(Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoRequest request);
-        
         // CODEGEN: Generating message contract since element name baseNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBoardBinStatusByBaseNo", ReplyAction="*")]
         Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse GetListBoardBinStatusByBaseNo(Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBoardBinStatusByBaseNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse> GetListBoardBinStatusByBaseNoAsync(Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequest request);
         
         // CODEGEN: Generating message contract since element name orderNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBoardBinStatusByOrderNo", ReplyAction="*")]
         Line_Production.PVSReference.GetListBoardBinStatusByOrderNoResponse GetListBoardBinStatusByOrderNo(Line_Production.PVSReference.GetListBoardBinStatusByOrderNoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBoardBinStatusByOrderNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBoardBinStatusByOrderNoResponse> GetListBoardBinStatusByOrderNoAsync(Line_Production.PVSReference.GetListBoardBinStatusByOrderNoRequest request);
-        
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWorkOrderItemByBoardNo", ReplyAction="*")]
         Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse GetWorkOrderItemByBoardNo(Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWorkOrderItemByBoardNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse> GetWorkOrderItemByBoardNoAsync(Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequest request);
         
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWorkOrderItem", ReplyAction="*")]
         Line_Production.PVSReference.GetWorkOrderItemResponse GetWorkOrderItem(Line_Production.PVSReference.GetWorkOrderItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWorkOrderItem", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderItemResponse> GetWorkOrderItemAsync(Line_Production.PVSReference.GetWorkOrderItemRequest request);
-        
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetScanningLogsByBoardNo", ReplyAction="*")]
         Line_Production.PVSReference.GetScanningLogsByBoardNoResponse GetScanningLogsByBoardNo(Line_Production.PVSReference.GetScanningLogsByBoardNoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetScanningLogsByBoardNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsByBoardNoResponse> GetScanningLogsByBoardNoAsync(Line_Production.PVSReference.GetScanningLogsByBoardNoRequest request);
         
         // CODEGEN: Generating message contract since element name queryJSON from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetScanningLogsByQuery", ReplyAction="*")]
         Line_Production.PVSReference.GetScanningLogsByQueryResponse GetScanningLogsByQuery(Line_Production.PVSReference.GetScanningLogsByQueryRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetScanningLogsByQuery", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsByQueryResponse> GetScanningLogsByQueryAsync(Line_Production.PVSReference.GetScanningLogsByQueryRequest request);
-        
         // CODEGEN: Generating message contract since element name boardNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetScanningLogs", ReplyAction="*")]
         Line_Production.PVSReference.GetScanningLogsResponse GetScanningLogs(Line_Production.PVSReference.GetScanningLogsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetScanningLogs", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsResponse> GetScanningLogsAsync(Line_Production.PVSReference.GetScanningLogsRequest request);
         
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRulesLikeNo", ReplyAction="*")]
         Line_Production.PVSReference.GetBarodeRulesLikeNoResponse GetBarodeRulesLikeNo(Line_Production.PVSReference.GetBarodeRulesLikeNoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRulesLikeNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRulesLikeNoResponse> GetBarodeRulesLikeNoAsync(Line_Production.PVSReference.GetBarodeRulesLikeNoRequest request);
-        
         // CODEGEN: Generating message contract since element name ruleNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarcodeRuleEntityByRuleNO", ReplyAction="*")]
         Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNOResponse GetBarcodeRuleEntityByRuleNO(Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNORequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarcodeRuleEntityByRuleNO", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNOResponse> GetBarcodeRuleEntityByRuleNOAsync(Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNORequest request);
         
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRuleItemsLikeNo", ReplyAction="*")]
         Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse GetBarodeRuleItemsLikeNo(Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRuleItemsLikeNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse> GetBarodeRuleItemsLikeNoAsync(Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequest request);
-        
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBarodeRuleItemsStartWidth", ReplyAction="*")]
         Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthResponse GetListBarodeRuleItemsStartWidth(Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBarodeRuleItemsStartWidth", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthResponse> GetListBarodeRuleItemsStartWidthAsync(Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthRequest request);
         
         // CODEGEN: Generating message contract since element name ruleNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRuleItemsByRuleNo", ReplyAction="*")]
         Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse GetBarodeRuleItemsByRuleNo(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRuleItemsByRuleNo", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse> GetBarodeRuleItemsByRuleNoAsync(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequest request);
-        
         // CODEGEN: Generating message contract since element name ruleNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRuleItemsByRuleNoJson", ReplyAction="*")]
         Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonResponse GetBarodeRuleItemsByRuleNoJson(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBarodeRuleItemsByRuleNoJson", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonResponse> GetBarodeRuleItemsByRuleNoJsonAsync(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonRequest request);
         
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListModelStartWidth", ReplyAction="*")]
         Line_Production.PVSReference.GetListModelStartWidthResponse GetListModelStartWidth(Line_Production.PVSReference.GetListModelStartWidthRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListModelStartWidth", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListModelStartWidthResponse> GetListModelStartWidthAsync(Line_Production.PVSReference.GetListModelStartWidthRequest request);
-        
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListModelLikeKeyword", ReplyAction="*")]
         Line_Production.PVSReference.GetListModelLikeKeywordResponse GetListModelLikeKeyword(Line_Production.PVSReference.GetListModelLikeKeywordRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListModelLikeKeyword", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListModelLikeKeywordResponse> GetListModelLikeKeywordAsync(Line_Production.PVSReference.GetListModelLikeKeywordRequest request);
         
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListINSPECTION_PROCESSESStartWidth", ReplyAction="*")]
         Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse GetListINSPECTION_PROCESSESStartWidth(Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListINSPECTION_PROCESSESStartWidth", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse> GetListINSPECTION_PROCESSESStartWidthAsync(Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequest request);
-        
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListINSPECTION_PROCESSESLikeKeyword", ReplyAction="*")]
         Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordResponse GetListINSPECTION_PROCESSESLikeKeyword(Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListINSPECTION_PROCESSESLikeKeyword", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordResponse> GetListINSPECTION_PROCESSESLikeKeywordAsync(Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordRequest request);
         
         // CODEGEN: Generating message contract since element name productId from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetEntityINSPECTION_PROCESSES", ReplyAction="*")]
         Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse GetEntityINSPECTION_PROCESSES(Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetEntityINSPECTION_PROCESSES", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse> GetEntityINSPECTION_PROCESSESAsync(Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequest request);
-        
         // CODEGEN: Generating message contract since element name lineID from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetLineStartByLineId", ReplyAction="*")]
         Line_Production.PVSReference.GetLineStartByLineIdResponse GetLineStartByLineId(Line_Production.PVSReference.GetLineStartByLineIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetLineStartByLineId", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetLineStartByLineIdResponse> GetLineStartByLineIdAsync(Line_Production.PVSReference.GetLineStartByLineIdRequest request);
+        // CODEGEN: Generating message contract since element name MaterialAllLinesStartedResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialAllLinesStarted", ReplyAction="*")]
+        Line_Production.PVSReference.MaterialAllLinesStartedResponse MaterialAllLinesStarted(Line_Production.PVSReference.MaterialAllLinesStartedRequest request);
         
         // CODEGEN: Generating message contract since element name lineID from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetLineStartByLineIdJson", ReplyAction="*")]
         Line_Production.PVSReference.GetLineStartByLineIdJsonResponse GetLineStartByLineIdJson(Line_Production.PVSReference.GetLineStartByLineIdJsonRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetLineStartByLineIdJson", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetLineStartByLineIdJsonResponse> GetLineStartByLineIdJsonAsync(Line_Production.PVSReference.GetLineStartByLineIdJsonRequest request);
-        
         // CODEGEN: Generating message contract since element name id from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListOrderItemsById", ReplyAction="*")]
         Line_Production.PVSReference.GetListOrderItemsByIdResponse GetListOrderItemsById(Line_Production.PVSReference.GetListOrderItemsByIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListOrderItemsById", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListOrderItemsByIdResponse> GetListOrderItemsByIdAsync(Line_Production.PVSReference.GetListOrderItemsByIdRequest request);
+        // CODEGEN: Generating message contract since element name id from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetMaterialById", ReplyAction="*")]
+        Line_Production.PVSReference.GetMaterialByIdResponse GetMaterialById(Line_Production.PVSReference.GetMaterialByIdRequest request);
         
         // CODEGEN: Generating message contract since element name product from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRuleByProduct", ReplyAction="*")]
         Line_Production.PVSReference.GetRuleByProductResponse GetRuleByProduct(Line_Production.PVSReference.GetRuleByProductRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRuleByProduct", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetRuleByProductResponse> GetRuleByProductAsync(Line_Production.PVSReference.GetRuleByProductRequest request);
-        
         // CODEGEN: Generating message contract since element name id from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListOrderItemsByIdJson", ReplyAction="*")]
         Line_Production.PVSReference.GetListOrderItemsByIdJsonResponse GetListOrderItemsByIdJson(Line_Production.PVSReference.GetListOrderItemsByIdJsonRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListOrderItemsByIdJson", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListOrderItemsByIdJsonResponse> GetListOrderItemsByIdJsonAsync(Line_Production.PVSReference.GetListOrderItemsByIdJsonRequest request);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Analyst", ReplyAction="*")]
         void Analyst(System.DateTime dateTime);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Analyst", ReplyAction="*")]
-        System.Threading.Tasks.Task AnalystAsync(System.DateTime dateTime);
         
         // CODEGEN: Generating message contract since element name customer from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetModels", ReplyAction="*")]
         Line_Production.PVSReference.GetModelsResponse GetModels(Line_Production.PVSReference.GetModelsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetModels", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetModelsResponse> GetModelsAsync(Line_Production.PVSReference.GetModelsRequest request);
-        
         // CODEGEN: Generating message contract since element name keyValue from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModelSaves", ReplyAction="*")]
         Line_Production.PVSReference.ModelSavesResponse ModelSaves(Line_Production.PVSReference.ModelSavesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModelSaves", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.ModelSavesResponse> ModelSavesAsync(Line_Production.PVSReference.ModelSavesRequest request);
         
         // CODEGEN: Generating message contract since element name partID from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CheckPartExist", ReplyAction="*")]
         Line_Production.PVSReference.CheckPartExistResponse CheckPartExist(Line_Production.PVSReference.CheckPartExistRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CheckPartExist", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.CheckPartExistResponse> CheckPartExistAsync(Line_Production.PVSReference.CheckPartExistRequest request);
-        
         // CODEGEN: Generating message contract since element name key from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SearchProducts", ReplyAction="*")]
         Line_Production.PVSReference.SearchProductsResponse SearchProducts(Line_Production.PVSReference.SearchProductsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SearchProducts", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.SearchProductsResponse> SearchProductsAsync(Line_Production.PVSReference.SearchProductsRequest request);
         
         // CODEGEN: Generating message contract since element name keyword from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetStationNoLike", ReplyAction="*")]
         Line_Production.PVSReference.GetStationNoLikeResponse GetStationNoLike(Line_Production.PVSReference.GetStationNoLikeRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetStationNoLike", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetStationNoLikeResponse> GetStationNoLikeAsync(Line_Production.PVSReference.GetStationNoLikeRequest request);
-        
         // CODEGEN: Generating message contract since element name lineID from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialGetOperationLogs", ReplyAction="*")]
         Line_Production.PVSReference.MaterialGetOperationLogsResponse MaterialGetOperationLogs(Line_Production.PVSReference.MaterialGetOperationLogsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialGetOperationLogs", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialGetOperationLogsResponse> MaterialGetOperationLogsAsync(Line_Production.PVSReference.MaterialGetOperationLogsRequest request);
-        
-        // CODEGEN: Generating message contract since element name lineID from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialCheckReload", ReplyAction="*")]
-        Line_Production.PVSReference.MaterialCheckReloadResponse MaterialCheckReload(Line_Production.PVSReference.MaterialCheckReloadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialCheckReload", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialCheckReloadResponse> MaterialCheckReloadAsync(Line_Production.PVSReference.MaterialCheckReloadRequest request);
         
         // CODEGEN: Generating message contract since element name orderNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWorkOrderProcedure", ReplyAction="*")]
         Line_Production.PVSReference.GetWorkOrderProcedureResponse GetWorkOrderProcedure(Line_Production.PVSReference.GetWorkOrderProcedureRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetWorkOrderProcedure", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderProcedureResponse> GetWorkOrderProcedureAsync(Line_Production.PVSReference.GetWorkOrderProcedureRequest request);
-        
         // CODEGEN: Generating message contract since element name MaterialLinesResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialLines", ReplyAction="*")]
         Line_Production.PVSReference.MaterialLinesResponse MaterialLines(Line_Production.PVSReference.MaterialLinesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaterialLines", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialLinesResponse> MaterialLinesAsync(Line_Production.PVSReference.MaterialLinesRequest request);
-        
         // CODEGEN: Generating message contract since element name memberID from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoleMember", ReplyAction="*")]
         Line_Production.PVSReference.GetRoleMemberResponse GetRoleMember(Line_Production.PVSReference.GetRoleMemberRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRoleMember", ReplyAction="*")]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetRoleMemberResponse> GetRoleMemberAsync(Line_Production.PVSReference.GetRoleMemberRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -7083,6 +6952,67 @@ namespace Line_Production.PVSReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class MaterialAllLinesStartedRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="MaterialAllLinesStarted", Namespace="http://tempuri.org/", Order=0)]
+        public Line_Production.PVSReference.MaterialAllLinesStartedRequestBody Body;
+        
+        public MaterialAllLinesStartedRequest() {
+        }
+        
+        public MaterialAllLinesStartedRequest(Line_Production.PVSReference.MaterialAllLinesStartedRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class MaterialAllLinesStartedRequestBody {
+        
+        public MaterialAllLinesStartedRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class MaterialAllLinesStartedResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="MaterialAllLinesStartedResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Line_Production.PVSReference.MaterialAllLinesStartedResponseBody Body;
+        
+        public MaterialAllLinesStartedResponse() {
+        }
+        
+        public MaterialAllLinesStartedResponse(Line_Production.PVSReference.MaterialAllLinesStartedResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class MaterialAllLinesStartedResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Line_Production.PVSReference.MATERIAL_ORDERSEntity[] MaterialAllLinesStartedResult;
+        
+        public MaterialAllLinesStartedResponseBody() {
+        }
+        
+        public MaterialAllLinesStartedResponseBody(Line_Production.PVSReference.MATERIAL_ORDERSEntity[] MaterialAllLinesStartedResult) {
+            this.MaterialAllLinesStartedResult = MaterialAllLinesStartedResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetLineStartByLineIdJsonRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLineStartByLineIdJson", Namespace="http://tempuri.org/", Order=0)]
@@ -7212,6 +7142,74 @@ namespace Line_Production.PVSReference {
         
         public GetListOrderItemsByIdResponseBody(Line_Production.PVSReference.MATERIAL_ORDER_ITEMSEntity[] GetListOrderItemsByIdResult) {
             this.GetListOrderItemsByIdResult = GetListOrderItemsByIdResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMaterialByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMaterialById", Namespace="http://tempuri.org/", Order=0)]
+        public Line_Production.PVSReference.GetMaterialByIdRequestBody Body;
+        
+        public GetMaterialByIdRequest() {
+        }
+        
+        public GetMaterialByIdRequest(Line_Production.PVSReference.GetMaterialByIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMaterialByIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string id;
+        
+        public GetMaterialByIdRequestBody() {
+        }
+        
+        public GetMaterialByIdRequestBody(string id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMaterialByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMaterialByIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public Line_Production.PVSReference.GetMaterialByIdResponseBody Body;
+        
+        public GetMaterialByIdResponse() {
+        }
+        
+        public GetMaterialByIdResponse(Line_Production.PVSReference.GetMaterialByIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetMaterialByIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Line_Production.PVSReference.MATERIAL_ORDERSEntity GetMaterialByIdResult;
+        
+        public GetMaterialByIdResponseBody() {
+        }
+        
+        public GetMaterialByIdResponseBody(Line_Production.PVSReference.MATERIAL_ORDERSEntity GetMaterialByIdResult) {
+            this.GetMaterialByIdResult = GetMaterialByIdResult;
         }
     }
     
@@ -7772,82 +7770,6 @@ namespace Line_Production.PVSReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class MaterialCheckReloadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="MaterialCheckReload", Namespace="http://tempuri.org/", Order=0)]
-        public Line_Production.PVSReference.MaterialCheckReloadRequestBody Body;
-        
-        public MaterialCheckReloadRequest() {
-        }
-        
-        public MaterialCheckReloadRequest(Line_Production.PVSReference.MaterialCheckReloadRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class MaterialCheckReloadRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string lineID;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string materialOrderID;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string task;
-        
-        public MaterialCheckReloadRequestBody() {
-        }
-        
-        public MaterialCheckReloadRequestBody(string lineID, string materialOrderID, string task) {
-            this.lineID = lineID;
-            this.materialOrderID = materialOrderID;
-            this.task = task;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class MaterialCheckReloadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="MaterialCheckReloadResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Line_Production.PVSReference.MaterialCheckReloadResponseBody Body;
-        
-        public MaterialCheckReloadResponse() {
-        }
-        
-        public MaterialCheckReloadResponse(Line_Production.PVSReference.MaterialCheckReloadResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class MaterialCheckReloadResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Line_Production.PVSReference.OPERATION_LOGSEntity[] MaterialCheckReloadResult;
-        
-        public MaterialCheckReloadResponseBody() {
-        }
-        
-        public MaterialCheckReloadResponseBody(Line_Production.PVSReference.OPERATION_LOGSEntity[] MaterialCheckReloadResult) {
-            this.MaterialCheckReloadResult = MaterialCheckReloadResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class GetWorkOrderProcedureRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetWorkOrderProcedure", Namespace="http://tempuri.org/", Order=0)]
@@ -8082,18 +8004,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetMacResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetMacAsync(Line_Production.PVSReference.GetMacRequest request) {
-            return base.Channel.GetMacAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetMacResponse> GetMacAsync(string boardNo) {
-            Line_Production.PVSReference.GetMacRequest inValue = new Line_Production.PVSReference.GetMacRequest();
-            inValue.Body = new Line_Production.PVSReference.GetMacRequestBody();
-            inValue.Body.boardNo = boardNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetMacAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.KyoGetMacResponse Line_Production.PVSReference.PVSWebServiceSoap.KyoGetMac(Line_Production.PVSReference.KyoGetMacRequest request) {
             return base.Channel.KyoGetMac(request);
         }
@@ -8104,18 +8014,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.boxID = boxID;
             Line_Production.PVSReference.KyoGetMacResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoGetMac(inValue);
             return retVal.Body.KyoGetMacResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoGetMacResponse> Line_Production.PVSReference.PVSWebServiceSoap.KyoGetMacAsync(Line_Production.PVSReference.KyoGetMacRequest request) {
-            return base.Channel.KyoGetMacAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.KyoGetMacResponse> KyoGetMacAsync(string boxID) {
-            Line_Production.PVSReference.KyoGetMacRequest inValue = new Line_Production.PVSReference.KyoGetMacRequest();
-            inValue.Body = new Line_Production.PVSReference.KyoGetMacRequestBody();
-            inValue.Body.boxID = boxID;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoGetMacAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8132,18 +8030,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoGetBoardResponse> Line_Production.PVSReference.PVSWebServiceSoap.KyoGetBoardAsync(Line_Production.PVSReference.KyoGetBoardRequest request) {
-            return base.Channel.KyoGetBoardAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.KyoGetBoardResponse> KyoGetBoardAsync(string boardNo) {
-            Line_Production.PVSReference.KyoGetBoardRequest inValue = new Line_Production.PVSReference.KyoGetBoardRequest();
-            inValue.Body = new Line_Production.PVSReference.KyoGetBoardRequestBody();
-            inValue.Body.boardNo = boardNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoGetBoardAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.KyoSaveBoardResponse Line_Production.PVSReference.PVSWebServiceSoap.KyoSaveBoard(Line_Production.PVSReference.KyoSaveBoardRequest request) {
             return base.Channel.KyoSaveBoard(request);
         }
@@ -8154,19 +8040,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.key = key;
             inValue.Body.entity = entity;
             Line_Production.PVSReference.KyoSaveBoardResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoSaveBoard(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoSaveBoardResponse> Line_Production.PVSReference.PVSWebServiceSoap.KyoSaveBoardAsync(Line_Production.PVSReference.KyoSaveBoardRequest request) {
-            return base.Channel.KyoSaveBoardAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.KyoSaveBoardResponse> KyoSaveBoardAsync(string key, Line_Production.PVSReference.KYOCERAEntity entity) {
-            Line_Production.PVSReference.KyoSaveBoardRequest inValue = new Line_Production.PVSReference.KyoSaveBoardRequest();
-            inValue.Body = new Line_Production.PVSReference.KyoSaveBoardRequestBody();
-            inValue.Body.key = key;
-            inValue.Body.entity = entity;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoSaveBoardAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8181,24 +8054,8 @@ namespace Line_Production.PVSReference {
             Line_Production.PVSReference.KyoRemoveBoardResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoRemoveBoard(inValue);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.KyoRemoveBoardResponse> Line_Production.PVSReference.PVSWebServiceSoap.KyoRemoveBoardAsync(Line_Production.PVSReference.KyoRemoveBoardRequest request) {
-            return base.Channel.KyoRemoveBoardAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.KyoRemoveBoardResponse> KyoRemoveBoardAsync(string key) {
-            Line_Production.PVSReference.KyoRemoveBoardRequest inValue = new Line_Production.PVSReference.KyoRemoveBoardRequest();
-            inValue.Body = new Line_Production.PVSReference.KyoRemoveBoardRequestBody();
-            inValue.Body.key = key;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).KyoRemoveBoardAsync(inValue);
-        }
-        
         public System.DateTime GetDateTime() {
             return base.Channel.GetDateTime();
-        }
-        
-        public System.Threading.Tasks.Task<System.DateTime> GetDateTimeAsync() {
-            return base.Channel.GetDateTimeAsync();
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8216,19 +8073,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.CheckUserLoginResponse> Line_Production.PVSReference.PVSWebServiceSoap.CheckUserLoginAsync(Line_Production.PVSReference.CheckUserLoginRequest request) {
-            return base.Channel.CheckUserLoginAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.CheckUserLoginResponse> CheckUserLoginAsync(string username, string password) {
-            Line_Production.PVSReference.CheckUserLoginRequest inValue = new Line_Production.PVSReference.CheckUserLoginRequest();
-            inValue.Body = new Line_Production.PVSReference.CheckUserLoginRequestBody();
-            inValue.Body.username = username;
-            inValue.Body.password = password;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).CheckUserLoginAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetUserByIDResponse Line_Production.PVSReference.PVSWebServiceSoap.GetUserByID(Line_Production.PVSReference.GetUserByIDRequest request) {
             return base.Channel.GetUserByID(request);
         }
@@ -8239,18 +8083,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.username = username;
             Line_Production.PVSReference.GetUserByIDResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetUserByID(inValue);
             return retVal.Body.GetUserByIDResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetUserByIDResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetUserByIDAsync(Line_Production.PVSReference.GetUserByIDRequest request) {
-            return base.Channel.GetUserByIDAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetUserByIDResponse> GetUserByIDAsync(string username) {
-            Line_Production.PVSReference.GetUserByIDRequest inValue = new Line_Production.PVSReference.GetUserByIDRequest();
-            inValue.Body = new Line_Production.PVSReference.GetUserByIDRequestBody();
-            inValue.Body.username = username;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetUserByIDAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8267,18 +8099,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetUserToJsonByIDResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetUserToJsonByIDAsync(Line_Production.PVSReference.GetUserToJsonByIDRequest request) {
-            return base.Channel.GetUserToJsonByIDAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetUserToJsonByIDResponse> GetUserToJsonByIDAsync(string username) {
-            Line_Production.PVSReference.GetUserToJsonByIDRequest inValue = new Line_Production.PVSReference.GetUserToJsonByIDRequest();
-            inValue.Body = new Line_Production.PVSReference.GetUserToJsonByIDRequestBody();
-            inValue.Body.username = username;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetUserToJsonByIDAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetBoardBinStatusByBoardNo(Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequest request) {
             return base.Channel.GetBoardBinStatusByBoardNo(request);
         }
@@ -8289,18 +8109,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.boardNo = boardNo;
             Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBoardBinStatusByBoardNo(inValue);
             return retVal.Body.GetBoardBinStatusByBoardNoResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBoardBinStatusByBoardNoAsync(Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequest request) {
-            return base.Channel.GetBoardBinStatusByBoardNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse> GetBoardBinStatusByBoardNoAsync(string boardNo) {
-            Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequest inValue = new Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetBoardBinStatusByBoardNoRequestBody();
-            inValue.Body.boardNo = boardNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBoardBinStatusByBoardNoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8318,19 +8126,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBoardBinStatusByBoardNoAndOrderNoAsync(Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoRequest request) {
-            return base.Channel.GetBoardBinStatusByBoardNoAndOrderNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoResponse> GetBoardBinStatusByBoardNoAndOrderNoAsync(string boardNo, string orderNo) {
-            Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoRequest inValue = new Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoRequestBody();
-            inValue.Body.boardNo = boardNo;
-            inValue.Body.orderNo = orderNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBoardBinStatusByBoardNoAndOrderNoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetListBoardBinStatusByBaseNo(Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequest request) {
             return base.Channel.GetListBoardBinStatusByBaseNo(request);
         }
@@ -8341,18 +8136,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.baseNo = baseNo;
             Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListBoardBinStatusByBaseNo(inValue);
             return retVal.Body.GetListBoardBinStatusByBaseNoResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListBoardBinStatusByBaseNoAsync(Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequest request) {
-            return base.Channel.GetListBoardBinStatusByBaseNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse> GetListBoardBinStatusByBaseNoAsync(string baseNo) {
-            Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequest inValue = new Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListBoardBinStatusByBaseNoRequestBody();
-            inValue.Body.baseNo = baseNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListBoardBinStatusByBaseNoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8369,18 +8152,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBoardBinStatusByOrderNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListBoardBinStatusByOrderNoAsync(Line_Production.PVSReference.GetListBoardBinStatusByOrderNoRequest request) {
-            return base.Channel.GetListBoardBinStatusByOrderNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBoardBinStatusByOrderNoResponse> GetListBoardBinStatusByOrderNoAsync(string orderNo) {
-            Line_Production.PVSReference.GetListBoardBinStatusByOrderNoRequest inValue = new Line_Production.PVSReference.GetListBoardBinStatusByOrderNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListBoardBinStatusByOrderNoRequestBody();
-            inValue.Body.orderNo = orderNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListBoardBinStatusByOrderNoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetWorkOrderItemByBoardNo(Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequest request) {
             return base.Channel.GetWorkOrderItemByBoardNo(request);
         }
@@ -8391,18 +8162,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.boardNo = boardNo;
             Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetWorkOrderItemByBoardNo(inValue);
             return retVal.Body.GetWorkOrderItemByBoardNoResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetWorkOrderItemByBoardNoAsync(Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequest request) {
-            return base.Channel.GetWorkOrderItemByBoardNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse> GetWorkOrderItemByBoardNoAsync(string boardNo) {
-            Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequest inValue = new Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetWorkOrderItemByBoardNoRequestBody();
-            inValue.Body.boardNo = boardNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetWorkOrderItemByBoardNoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8420,19 +8179,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderItemResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetWorkOrderItemAsync(Line_Production.PVSReference.GetWorkOrderItemRequest request) {
-            return base.Channel.GetWorkOrderItemAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderItemResponse> GetWorkOrderItemAsync(string boardNo, string stationNo) {
-            Line_Production.PVSReference.GetWorkOrderItemRequest inValue = new Line_Production.PVSReference.GetWorkOrderItemRequest();
-            inValue.Body = new Line_Production.PVSReference.GetWorkOrderItemRequestBody();
-            inValue.Body.boardNo = boardNo;
-            inValue.Body.stationNo = stationNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetWorkOrderItemAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetScanningLogsByBoardNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetScanningLogsByBoardNo(Line_Production.PVSReference.GetScanningLogsByBoardNoRequest request) {
             return base.Channel.GetScanningLogsByBoardNo(request);
         }
@@ -8446,18 +8192,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsByBoardNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetScanningLogsByBoardNoAsync(Line_Production.PVSReference.GetScanningLogsByBoardNoRequest request) {
-            return base.Channel.GetScanningLogsByBoardNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsByBoardNoResponse> GetScanningLogsByBoardNoAsync(string boardNo) {
-            Line_Production.PVSReference.GetScanningLogsByBoardNoRequest inValue = new Line_Production.PVSReference.GetScanningLogsByBoardNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetScanningLogsByBoardNoRequestBody();
-            inValue.Body.boardNo = boardNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetScanningLogsByBoardNoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetScanningLogsByQueryResponse Line_Production.PVSReference.PVSWebServiceSoap.GetScanningLogsByQuery(Line_Production.PVSReference.GetScanningLogsByQueryRequest request) {
             return base.Channel.GetScanningLogsByQuery(request);
         }
@@ -8468,18 +8202,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.queryJSON = queryJSON;
             Line_Production.PVSReference.GetScanningLogsByQueryResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetScanningLogsByQuery(inValue);
             return retVal.Body.GetScanningLogsByQueryResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsByQueryResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetScanningLogsByQueryAsync(Line_Production.PVSReference.GetScanningLogsByQueryRequest request) {
-            return base.Channel.GetScanningLogsByQueryAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsByQueryResponse> GetScanningLogsByQueryAsync(string queryJSON) {
-            Line_Production.PVSReference.GetScanningLogsByQueryRequest inValue = new Line_Production.PVSReference.GetScanningLogsByQueryRequest();
-            inValue.Body = new Line_Production.PVSReference.GetScanningLogsByQueryRequestBody();
-            inValue.Body.queryJSON = queryJSON;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetScanningLogsByQueryAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8497,19 +8219,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetScanningLogsAsync(Line_Production.PVSReference.GetScanningLogsRequest request) {
-            return base.Channel.GetScanningLogsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetScanningLogsResponse> GetScanningLogsAsync(string boardNo, string stationNo) {
-            Line_Production.PVSReference.GetScanningLogsRequest inValue = new Line_Production.PVSReference.GetScanningLogsRequest();
-            inValue.Body = new Line_Production.PVSReference.GetScanningLogsRequestBody();
-            inValue.Body.boardNo = boardNo;
-            inValue.Body.stationNo = stationNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetScanningLogsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetBarodeRulesLikeNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRulesLikeNo(Line_Production.PVSReference.GetBarodeRulesLikeNoRequest request) {
             return base.Channel.GetBarodeRulesLikeNo(request);
         }
@@ -8520,18 +8229,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.keyword = keyword;
             Line_Production.PVSReference.GetBarodeRulesLikeNoResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRulesLikeNo(inValue);
             return retVal.Body.GetBarodeRulesLikeNoResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRulesLikeNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRulesLikeNoAsync(Line_Production.PVSReference.GetBarodeRulesLikeNoRequest request) {
-            return base.Channel.GetBarodeRulesLikeNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRulesLikeNoResponse> GetBarodeRulesLikeNoAsync(string keyword) {
-            Line_Production.PVSReference.GetBarodeRulesLikeNoRequest inValue = new Line_Production.PVSReference.GetBarodeRulesLikeNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetBarodeRulesLikeNoRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRulesLikeNoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8548,18 +8245,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNOResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBarcodeRuleEntityByRuleNOAsync(Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNORequest request) {
-            return base.Channel.GetBarcodeRuleEntityByRuleNOAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNOResponse> GetBarcodeRuleEntityByRuleNOAsync(string ruleNo) {
-            Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNORequest inValue = new Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNORequest();
-            inValue.Body = new Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNORequestBody();
-            inValue.Body.ruleNo = ruleNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarcodeRuleEntityByRuleNOAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRuleItemsLikeNo(Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequest request) {
             return base.Channel.GetBarodeRuleItemsLikeNo(request);
         }
@@ -8570,18 +8255,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.keyword = keyword;
             Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRuleItemsLikeNo(inValue);
             return retVal.Body.GetBarodeRuleItemsLikeNoResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRuleItemsLikeNoAsync(Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequest request) {
-            return base.Channel.GetBarodeRuleItemsLikeNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse> GetBarodeRuleItemsLikeNoAsync(string keyword) {
-            Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequest inValue = new Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetBarodeRuleItemsLikeNoRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRuleItemsLikeNoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8598,18 +8271,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListBarodeRuleItemsStartWidthAsync(Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthRequest request) {
-            return base.Channel.GetListBarodeRuleItemsStartWidthAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthResponse> GetListBarodeRuleItemsStartWidthAsync(string keyword) {
-            Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthRequest inValue = new Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListBarodeRuleItemsStartWidthAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRuleItemsByRuleNo(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequest request) {
             return base.Channel.GetBarodeRuleItemsByRuleNo(request);
         }
@@ -8620,18 +8281,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.ruleNo = ruleNo;
             Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRuleItemsByRuleNo(inValue);
             return retVal.Body.GetBarodeRuleItemsByRuleNoResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRuleItemsByRuleNoAsync(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequest request) {
-            return base.Channel.GetBarodeRuleItemsByRuleNoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse> GetBarodeRuleItemsByRuleNoAsync(string ruleNo) {
-            Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequest inValue = new Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequest();
-            inValue.Body = new Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoRequestBody();
-            inValue.Body.ruleNo = ruleNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRuleItemsByRuleNoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8648,18 +8297,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetBarodeRuleItemsByRuleNoJsonAsync(Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonRequest request) {
-            return base.Channel.GetBarodeRuleItemsByRuleNoJsonAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonResponse> GetBarodeRuleItemsByRuleNoJsonAsync(string ruleNo) {
-            Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonRequest inValue = new Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonRequest();
-            inValue.Body = new Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonRequestBody();
-            inValue.Body.ruleNo = ruleNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetBarodeRuleItemsByRuleNoJsonAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetListModelStartWidthResponse Line_Production.PVSReference.PVSWebServiceSoap.GetListModelStartWidth(Line_Production.PVSReference.GetListModelStartWidthRequest request) {
             return base.Channel.GetListModelStartWidth(request);
         }
@@ -8670,18 +8307,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.keyword = keyword;
             Line_Production.PVSReference.GetListModelStartWidthResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListModelStartWidth(inValue);
             return retVal.Body.GetListModelStartWidthResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListModelStartWidthResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListModelStartWidthAsync(Line_Production.PVSReference.GetListModelStartWidthRequest request) {
-            return base.Channel.GetListModelStartWidthAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListModelStartWidthResponse> GetListModelStartWidthAsync(string keyword) {
-            Line_Production.PVSReference.GetListModelStartWidthRequest inValue = new Line_Production.PVSReference.GetListModelStartWidthRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListModelStartWidthRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListModelStartWidthAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8698,18 +8323,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListModelLikeKeywordResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListModelLikeKeywordAsync(Line_Production.PVSReference.GetListModelLikeKeywordRequest request) {
-            return base.Channel.GetListModelLikeKeywordAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListModelLikeKeywordResponse> GetListModelLikeKeywordAsync(string keyword) {
-            Line_Production.PVSReference.GetListModelLikeKeywordRequest inValue = new Line_Production.PVSReference.GetListModelLikeKeywordRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListModelLikeKeywordRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListModelLikeKeywordAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse Line_Production.PVSReference.PVSWebServiceSoap.GetListINSPECTION_PROCESSESStartWidth(Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequest request) {
             return base.Channel.GetListINSPECTION_PROCESSESStartWidth(request);
         }
@@ -8720,18 +8333,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.keyword = keyword;
             Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListINSPECTION_PROCESSESStartWidth(inValue);
             return retVal.Body.GetListINSPECTION_PROCESSESStartWidthResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListINSPECTION_PROCESSESStartWidthAsync(Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequest request) {
-            return base.Channel.GetListINSPECTION_PROCESSESStartWidthAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse> GetListINSPECTION_PROCESSESStartWidthAsync(string keyword) {
-            Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequest inValue = new Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListINSPECTION_PROCESSESStartWidthAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8748,18 +8349,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListINSPECTION_PROCESSESLikeKeywordAsync(Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordRequest request) {
-            return base.Channel.GetListINSPECTION_PROCESSESLikeKeywordAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordResponse> GetListINSPECTION_PROCESSESLikeKeywordAsync(string keyword) {
-            Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordRequest inValue = new Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListINSPECTION_PROCESSESLikeKeywordAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse Line_Production.PVSReference.PVSWebServiceSoap.GetEntityINSPECTION_PROCESSES(Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequest request) {
             return base.Channel.GetEntityINSPECTION_PROCESSES(request);
         }
@@ -8770,18 +8359,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.productId = productId;
             Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetEntityINSPECTION_PROCESSES(inValue);
             return retVal.Body.GetEntityINSPECTION_PROCESSESResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetEntityINSPECTION_PROCESSESAsync(Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequest request) {
-            return base.Channel.GetEntityINSPECTION_PROCESSESAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse> GetEntityINSPECTION_PROCESSESAsync(string productId) {
-            Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequest inValue = new Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequest();
-            inValue.Body = new Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESRequestBody();
-            inValue.Body.productId = productId;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetEntityINSPECTION_PROCESSESAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8798,15 +8375,15 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetLineStartByLineIdResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetLineStartByLineIdAsync(Line_Production.PVSReference.GetLineStartByLineIdRequest request) {
-            return base.Channel.GetLineStartByLineIdAsync(request);
+        Line_Production.PVSReference.MaterialAllLinesStartedResponse Line_Production.PVSReference.PVSWebServiceSoap.MaterialAllLinesStarted(Line_Production.PVSReference.MaterialAllLinesStartedRequest request) {
+            return base.Channel.MaterialAllLinesStarted(request);
         }
         
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetLineStartByLineIdResponse> GetLineStartByLineIdAsync(string lineID) {
-            Line_Production.PVSReference.GetLineStartByLineIdRequest inValue = new Line_Production.PVSReference.GetLineStartByLineIdRequest();
-            inValue.Body = new Line_Production.PVSReference.GetLineStartByLineIdRequestBody();
-            inValue.Body.lineID = lineID;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetLineStartByLineIdAsync(inValue);
+        public Line_Production.PVSReference.MATERIAL_ORDERSEntity[] MaterialAllLinesStarted() {
+            Line_Production.PVSReference.MaterialAllLinesStartedRequest inValue = new Line_Production.PVSReference.MaterialAllLinesStartedRequest();
+            inValue.Body = new Line_Production.PVSReference.MaterialAllLinesStartedRequestBody();
+            Line_Production.PVSReference.MaterialAllLinesStartedResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).MaterialAllLinesStarted(inValue);
+            return retVal.Body.MaterialAllLinesStartedResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8823,18 +8400,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetLineStartByLineIdJsonResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetLineStartByLineIdJsonAsync(Line_Production.PVSReference.GetLineStartByLineIdJsonRequest request) {
-            return base.Channel.GetLineStartByLineIdJsonAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetLineStartByLineIdJsonResponse> GetLineStartByLineIdJsonAsync(string lineID) {
-            Line_Production.PVSReference.GetLineStartByLineIdJsonRequest inValue = new Line_Production.PVSReference.GetLineStartByLineIdJsonRequest();
-            inValue.Body = new Line_Production.PVSReference.GetLineStartByLineIdJsonRequestBody();
-            inValue.Body.lineID = lineID;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetLineStartByLineIdJsonAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetListOrderItemsByIdResponse Line_Production.PVSReference.PVSWebServiceSoap.GetListOrderItemsById(Line_Production.PVSReference.GetListOrderItemsByIdRequest request) {
             return base.Channel.GetListOrderItemsById(request);
         }
@@ -8848,15 +8413,16 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListOrderItemsByIdResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListOrderItemsByIdAsync(Line_Production.PVSReference.GetListOrderItemsByIdRequest request) {
-            return base.Channel.GetListOrderItemsByIdAsync(request);
+        Line_Production.PVSReference.GetMaterialByIdResponse Line_Production.PVSReference.PVSWebServiceSoap.GetMaterialById(Line_Production.PVSReference.GetMaterialByIdRequest request) {
+            return base.Channel.GetMaterialById(request);
         }
         
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListOrderItemsByIdResponse> GetListOrderItemsByIdAsync(string id) {
-            Line_Production.PVSReference.GetListOrderItemsByIdRequest inValue = new Line_Production.PVSReference.GetListOrderItemsByIdRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListOrderItemsByIdRequestBody();
+        public Line_Production.PVSReference.MATERIAL_ORDERSEntity GetMaterialById(string id) {
+            Line_Production.PVSReference.GetMaterialByIdRequest inValue = new Line_Production.PVSReference.GetMaterialByIdRequest();
+            inValue.Body = new Line_Production.PVSReference.GetMaterialByIdRequestBody();
             inValue.Body.id = id;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListOrderItemsByIdAsync(inValue);
+            Line_Production.PVSReference.GetMaterialByIdResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetMaterialById(inValue);
+            return retVal.Body.GetMaterialByIdResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8873,18 +8439,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetRuleByProductResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetRuleByProductAsync(Line_Production.PVSReference.GetRuleByProductRequest request) {
-            return base.Channel.GetRuleByProductAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetRuleByProductResponse> GetRuleByProductAsync(string product) {
-            Line_Production.PVSReference.GetRuleByProductRequest inValue = new Line_Production.PVSReference.GetRuleByProductRequest();
-            inValue.Body = new Line_Production.PVSReference.GetRuleByProductRequestBody();
-            inValue.Body.product = product;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetRuleByProductAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetListOrderItemsByIdJsonResponse Line_Production.PVSReference.PVSWebServiceSoap.GetListOrderItemsByIdJson(Line_Production.PVSReference.GetListOrderItemsByIdJsonRequest request) {
             return base.Channel.GetListOrderItemsByIdJson(request);
         }
@@ -8897,24 +8451,8 @@ namespace Line_Production.PVSReference {
             return retVal.Body.GetListOrderItemsByIdJsonResult;
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetListOrderItemsByIdJsonResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetListOrderItemsByIdJsonAsync(Line_Production.PVSReference.GetListOrderItemsByIdJsonRequest request) {
-            return base.Channel.GetListOrderItemsByIdJsonAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetListOrderItemsByIdJsonResponse> GetListOrderItemsByIdJsonAsync(string id) {
-            Line_Production.PVSReference.GetListOrderItemsByIdJsonRequest inValue = new Line_Production.PVSReference.GetListOrderItemsByIdJsonRequest();
-            inValue.Body = new Line_Production.PVSReference.GetListOrderItemsByIdJsonRequestBody();
-            inValue.Body.id = id;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetListOrderItemsByIdJsonAsync(inValue);
-        }
-        
         public void Analyst(System.DateTime dateTime) {
             base.Channel.Analyst(dateTime);
-        }
-        
-        public System.Threading.Tasks.Task AnalystAsync(System.DateTime dateTime) {
-            return base.Channel.AnalystAsync(dateTime);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8931,18 +8469,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetModelsResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetModelsAsync(Line_Production.PVSReference.GetModelsRequest request) {
-            return base.Channel.GetModelsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetModelsResponse> GetModelsAsync(string customer) {
-            Line_Production.PVSReference.GetModelsRequest inValue = new Line_Production.PVSReference.GetModelsRequest();
-            inValue.Body = new Line_Production.PVSReference.GetModelsRequestBody();
-            inValue.Body.customer = customer;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetModelsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.ModelSavesResponse Line_Production.PVSReference.PVSWebServiceSoap.ModelSaves(Line_Production.PVSReference.ModelSavesRequest request) {
             return base.Channel.ModelSaves(request);
         }
@@ -8953,19 +8479,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.keyValue = keyValue;
             inValue.Body.entity = entity;
             Line_Production.PVSReference.ModelSavesResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).ModelSaves(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.ModelSavesResponse> Line_Production.PVSReference.PVSWebServiceSoap.ModelSavesAsync(Line_Production.PVSReference.ModelSavesRequest request) {
-            return base.Channel.ModelSavesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.ModelSavesResponse> ModelSavesAsync(string keyValue, Line_Production.PVSReference.ModelsEntity entity) {
-            Line_Production.PVSReference.ModelSavesRequest inValue = new Line_Production.PVSReference.ModelSavesRequest();
-            inValue.Body = new Line_Production.PVSReference.ModelSavesRequestBody();
-            inValue.Body.keyValue = keyValue;
-            inValue.Body.entity = entity;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).ModelSavesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8983,19 +8496,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.CheckPartExistResponse> Line_Production.PVSReference.PVSWebServiceSoap.CheckPartExistAsync(Line_Production.PVSReference.CheckPartExistRequest request) {
-            return base.Channel.CheckPartExistAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.CheckPartExistResponse> CheckPartExistAsync(string partID, string model) {
-            Line_Production.PVSReference.CheckPartExistRequest inValue = new Line_Production.PVSReference.CheckPartExistRequest();
-            inValue.Body = new Line_Production.PVSReference.CheckPartExistRequestBody();
-            inValue.Body.partID = partID;
-            inValue.Body.model = model;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).CheckPartExistAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.SearchProductsResponse Line_Production.PVSReference.PVSWebServiceSoap.SearchProducts(Line_Production.PVSReference.SearchProductsRequest request) {
             return base.Channel.SearchProducts(request);
         }
@@ -9009,18 +8509,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.SearchProductsResponse> Line_Production.PVSReference.PVSWebServiceSoap.SearchProductsAsync(Line_Production.PVSReference.SearchProductsRequest request) {
-            return base.Channel.SearchProductsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.SearchProductsResponse> SearchProductsAsync(string key) {
-            Line_Production.PVSReference.SearchProductsRequest inValue = new Line_Production.PVSReference.SearchProductsRequest();
-            inValue.Body = new Line_Production.PVSReference.SearchProductsRequestBody();
-            inValue.Body.key = key;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).SearchProductsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetStationNoLikeResponse Line_Production.PVSReference.PVSWebServiceSoap.GetStationNoLike(Line_Production.PVSReference.GetStationNoLikeRequest request) {
             return base.Channel.GetStationNoLike(request);
         }
@@ -9031,18 +8519,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.keyword = keyword;
             Line_Production.PVSReference.GetStationNoLikeResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetStationNoLike(inValue);
             return retVal.Body.GetStationNoLikeResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetStationNoLikeResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetStationNoLikeAsync(Line_Production.PVSReference.GetStationNoLikeRequest request) {
-            return base.Channel.GetStationNoLikeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetStationNoLikeResponse> GetStationNoLikeAsync(string keyword) {
-            Line_Production.PVSReference.GetStationNoLikeRequest inValue = new Line_Production.PVSReference.GetStationNoLikeRequest();
-            inValue.Body = new Line_Production.PVSReference.GetStationNoLikeRequestBody();
-            inValue.Body.keyword = keyword;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetStationNoLikeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9061,49 +8537,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialGetOperationLogsResponse> Line_Production.PVSReference.PVSWebServiceSoap.MaterialGetOperationLogsAsync(Line_Production.PVSReference.MaterialGetOperationLogsRequest request) {
-            return base.Channel.MaterialGetOperationLogsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialGetOperationLogsResponse> MaterialGetOperationLogsAsync(string lineID, string materialOrderID, string task) {
-            Line_Production.PVSReference.MaterialGetOperationLogsRequest inValue = new Line_Production.PVSReference.MaterialGetOperationLogsRequest();
-            inValue.Body = new Line_Production.PVSReference.MaterialGetOperationLogsRequestBody();
-            inValue.Body.lineID = lineID;
-            inValue.Body.materialOrderID = materialOrderID;
-            inValue.Body.task = task;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).MaterialGetOperationLogsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Line_Production.PVSReference.MaterialCheckReloadResponse Line_Production.PVSReference.PVSWebServiceSoap.MaterialCheckReload(Line_Production.PVSReference.MaterialCheckReloadRequest request) {
-            return base.Channel.MaterialCheckReload(request);
-        }
-        
-        public Line_Production.PVSReference.OPERATION_LOGSEntity[] MaterialCheckReload(string lineID, string materialOrderID, string task) {
-            Line_Production.PVSReference.MaterialCheckReloadRequest inValue = new Line_Production.PVSReference.MaterialCheckReloadRequest();
-            inValue.Body = new Line_Production.PVSReference.MaterialCheckReloadRequestBody();
-            inValue.Body.lineID = lineID;
-            inValue.Body.materialOrderID = materialOrderID;
-            inValue.Body.task = task;
-            Line_Production.PVSReference.MaterialCheckReloadResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).MaterialCheckReload(inValue);
-            return retVal.Body.MaterialCheckReloadResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialCheckReloadResponse> Line_Production.PVSReference.PVSWebServiceSoap.MaterialCheckReloadAsync(Line_Production.PVSReference.MaterialCheckReloadRequest request) {
-            return base.Channel.MaterialCheckReloadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialCheckReloadResponse> MaterialCheckReloadAsync(string lineID, string materialOrderID, string task) {
-            Line_Production.PVSReference.MaterialCheckReloadRequest inValue = new Line_Production.PVSReference.MaterialCheckReloadRequest();
-            inValue.Body = new Line_Production.PVSReference.MaterialCheckReloadRequestBody();
-            inValue.Body.lineID = lineID;
-            inValue.Body.materialOrderID = materialOrderID;
-            inValue.Body.task = task;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).MaterialCheckReloadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetWorkOrderProcedureResponse Line_Production.PVSReference.PVSWebServiceSoap.GetWorkOrderProcedure(Line_Production.PVSReference.GetWorkOrderProcedureRequest request) {
             return base.Channel.GetWorkOrderProcedure(request);
         }
@@ -9114,18 +8547,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.orderNo = orderNo;
             Line_Production.PVSReference.GetWorkOrderProcedureResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetWorkOrderProcedure(inValue);
             return retVal.Body.GetWorkOrderProcedureResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderProcedureResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetWorkOrderProcedureAsync(Line_Production.PVSReference.GetWorkOrderProcedureRequest request) {
-            return base.Channel.GetWorkOrderProcedureAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetWorkOrderProcedureResponse> GetWorkOrderProcedureAsync(string orderNo) {
-            Line_Production.PVSReference.GetWorkOrderProcedureRequest inValue = new Line_Production.PVSReference.GetWorkOrderProcedureRequest();
-            inValue.Body = new Line_Production.PVSReference.GetWorkOrderProcedureRequestBody();
-            inValue.Body.orderNo = orderNo;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetWorkOrderProcedureAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9141,17 +8562,6 @@ namespace Line_Production.PVSReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialLinesResponse> Line_Production.PVSReference.PVSWebServiceSoap.MaterialLinesAsync(Line_Production.PVSReference.MaterialLinesRequest request) {
-            return base.Channel.MaterialLinesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.MaterialLinesResponse> MaterialLinesAsync() {
-            Line_Production.PVSReference.MaterialLinesRequest inValue = new Line_Production.PVSReference.MaterialLinesRequest();
-            inValue.Body = new Line_Production.PVSReference.MaterialLinesRequestBody();
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).MaterialLinesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         Line_Production.PVSReference.GetRoleMemberResponse Line_Production.PVSReference.PVSWebServiceSoap.GetRoleMember(Line_Production.PVSReference.GetRoleMemberRequest request) {
             return base.Channel.GetRoleMember(request);
         }
@@ -9162,18 +8572,6 @@ namespace Line_Production.PVSReference {
             inValue.Body.memberID = memberID;
             Line_Production.PVSReference.GetRoleMemberResponse retVal = ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetRoleMember(inValue);
             return retVal.Body.GetRoleMemberResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Line_Production.PVSReference.GetRoleMemberResponse> Line_Production.PVSReference.PVSWebServiceSoap.GetRoleMemberAsync(Line_Production.PVSReference.GetRoleMemberRequest request) {
-            return base.Channel.GetRoleMemberAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Line_Production.PVSReference.GetRoleMemberResponse> GetRoleMemberAsync(string memberID) {
-            Line_Production.PVSReference.GetRoleMemberRequest inValue = new Line_Production.PVSReference.GetRoleMemberRequest();
-            inValue.Body = new Line_Production.PVSReference.GetRoleMemberRequestBody();
-            inValue.Body.memberID = memberID;
-            return ((Line_Production.PVSReference.PVSWebServiceSoap)(this)).GetRoleMemberAsync(inValue);
         }
     }
 }

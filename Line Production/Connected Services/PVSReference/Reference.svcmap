@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b4da20e-d388-4446-8417-8f1b7fe58dd1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b551d5f1-6051-4e32-b508-a1d821450005" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
-    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
@@ -22,8 +21,8 @@
     <MetadataSource Address="http://172.28.10.17:99/Service/PVSWebService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PVSWebService.disco" MetadataType="Disco" ID="64e7b724-c52f-48a2-a293-d8b327e1e328" SourceId="1" SourceUrl="http://172.28.10.17:99/Service/PVSWebService.asmx?disco" />
-    <MetadataFile FileName="PVSWebService.wsdl" MetadataType="Wsdl" ID="98c00fdc-76bf-403b-8771-be7e5709d9bd" SourceId="1" SourceUrl="http://172.28.10.17:99/Service/PVSWebService.asmx?wsdl" />
+    <MetadataFile FileName="PVSWebService.disco" MetadataType="Disco" ID="a95a8864-4779-44ab-8046-70195105cb55" SourceId="1" SourceUrl="http://172.28.10.17:99/Service/PVSWebService.asmx?disco" />
+    <MetadataFile FileName="PVSWebService.wsdl" MetadataType="Wsdl" ID="4cf7d762-9abb-4099-9cbb-61be82bd688f" SourceId="1" SourceUrl="http://172.28.10.17:99/Service/PVSWebService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

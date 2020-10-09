@@ -705,6 +705,21 @@
           </s:extension>
         </s:complexContent>
       </s:complexType>
+      <s:element name="MaterialAllLinesStarted">
+        <s:complexType />
+      </s:element>
+      <s:element name="MaterialAllLinesStartedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaterialAllLinesStartedResult" type="tns:ArrayOfMATERIAL_ORDERSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMATERIAL_ORDERSEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MATERIAL_ORDERSEntity" nillable="true" type="tns:MATERIAL_ORDERSEntity" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetLineStartByLineIdJson">
         <s:complexType>
           <s:sequence>
@@ -769,6 +784,20 @@
           </s:extension>
         </s:complexContent>
       </s:complexType>
+      <s:element name="GetMaterialById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaterialByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaterialByIdResult" type="tns:MATERIAL_ORDERSEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetRuleByProduct">
         <s:complexType>
           <s:sequence>
@@ -1003,22 +1032,6 @@
           </s:extension>
         </s:complexContent>
       </s:complexType>
-      <s:element name="MaterialCheckReload">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="lineID" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="materialOrderID" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="task" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="MaterialCheckReloadResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="MaterialCheckReloadResult" type="tns:ArrayOfOPERATION_LOGSEntity" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="GetWorkOrderProcedure">
         <s:complexType>
           <s:sequence>
@@ -1325,6 +1338,12 @@
   <wsdl:message name="GetLineStartByLineIdSoapOut">
     <wsdl:part name="parameters" element="tns:GetLineStartByLineIdResponse" />
   </wsdl:message>
+  <wsdl:message name="MaterialAllLinesStartedSoapIn">
+    <wsdl:part name="parameters" element="tns:MaterialAllLinesStarted" />
+  </wsdl:message>
+  <wsdl:message name="MaterialAllLinesStartedSoapOut">
+    <wsdl:part name="parameters" element="tns:MaterialAllLinesStartedResponse" />
+  </wsdl:message>
   <wsdl:message name="GetLineStartByLineIdJsonSoapIn">
     <wsdl:part name="parameters" element="tns:GetLineStartByLineIdJson" />
   </wsdl:message>
@@ -1336,6 +1355,12 @@
   </wsdl:message>
   <wsdl:message name="GetListOrderItemsByIdSoapOut">
     <wsdl:part name="parameters" element="tns:GetListOrderItemsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaterialByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaterialById" />
+  </wsdl:message>
+  <wsdl:message name="GetMaterialByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaterialByIdResponse" />
   </wsdl:message>
   <wsdl:message name="GetRuleByProductSoapIn">
     <wsdl:part name="parameters" element="tns:GetRuleByProduct" />
@@ -1390,12 +1415,6 @@
   </wsdl:message>
   <wsdl:message name="MaterialGetOperationLogsSoapOut">
     <wsdl:part name="parameters" element="tns:MaterialGetOperationLogsResponse" />
-  </wsdl:message>
-  <wsdl:message name="MaterialCheckReloadSoapIn">
-    <wsdl:part name="parameters" element="tns:MaterialCheckReload" />
-  </wsdl:message>
-  <wsdl:message name="MaterialCheckReloadSoapOut">
-    <wsdl:part name="parameters" element="tns:MaterialCheckReloadResponse" />
   </wsdl:message>
   <wsdl:message name="GetWorkOrderProcedureSoapIn">
     <wsdl:part name="parameters" element="tns:GetWorkOrderProcedure" />
@@ -1536,6 +1555,10 @@
       <wsdl:input message="tns:GetLineStartByLineIdSoapIn" />
       <wsdl:output message="tns:GetLineStartByLineIdSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="MaterialAllLinesStarted">
+      <wsdl:input message="tns:MaterialAllLinesStartedSoapIn" />
+      <wsdl:output message="tns:MaterialAllLinesStartedSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetLineStartByLineIdJson">
       <wsdl:input message="tns:GetLineStartByLineIdJsonSoapIn" />
       <wsdl:output message="tns:GetLineStartByLineIdJsonSoapOut" />
@@ -1543,6 +1566,10 @@
     <wsdl:operation name="GetListOrderItemsById">
       <wsdl:input message="tns:GetListOrderItemsByIdSoapIn" />
       <wsdl:output message="tns:GetListOrderItemsByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialById">
+      <wsdl:input message="tns:GetMaterialByIdSoapIn" />
+      <wsdl:output message="tns:GetMaterialByIdSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetRuleByProduct">
       <wsdl:input message="tns:GetRuleByProductSoapIn" />
@@ -1579,10 +1606,6 @@
     <wsdl:operation name="MaterialGetOperationLogs">
       <wsdl:input message="tns:MaterialGetOperationLogsSoapIn" />
       <wsdl:output message="tns:MaterialGetOperationLogsSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="MaterialCheckReload">
-      <wsdl:input message="tns:MaterialCheckReloadSoapIn" />
-      <wsdl:output message="tns:MaterialCheckReloadSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetWorkOrderProcedure">
       <wsdl:input message="tns:GetWorkOrderProcedureSoapIn" />
@@ -1869,6 +1892,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="MaterialAllLinesStarted">
+      <soap:operation soapAction="http://tempuri.org/MaterialAllLinesStarted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetLineStartByLineIdJson">
       <soap:operation soapAction="http://tempuri.org/GetLineStartByLineIdJson" style="document" />
       <wsdl:input>
@@ -1880,6 +1912,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetListOrderItemsById">
       <soap:operation soapAction="http://tempuri.org/GetListOrderItemsById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialById">
+      <soap:operation soapAction="http://tempuri.org/GetMaterialById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1961,15 +2002,6 @@
     </wsdl:operation>
     <wsdl:operation name="MaterialGetOperationLogs">
       <soap:operation soapAction="http://tempuri.org/MaterialGetOperationLogs" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="MaterialCheckReload">
-      <soap:operation soapAction="http://tempuri.org/MaterialCheckReload" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2277,6 +2309,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="MaterialAllLinesStarted">
+      <soap12:operation soapAction="http://tempuri.org/MaterialAllLinesStarted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetLineStartByLineIdJson">
       <soap12:operation soapAction="http://tempuri.org/GetLineStartByLineIdJson" style="document" />
       <wsdl:input>
@@ -2288,6 +2329,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetListOrderItemsById">
       <soap12:operation soapAction="http://tempuri.org/GetListOrderItemsById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterialById">
+      <soap12:operation soapAction="http://tempuri.org/GetMaterialById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2369,15 +2419,6 @@
     </wsdl:operation>
     <wsdl:operation name="MaterialGetOperationLogs">
       <soap12:operation soapAction="http://tempuri.org/MaterialGetOperationLogs" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="MaterialCheckReload">
-      <soap12:operation soapAction="http://tempuri.org/MaterialCheckReload" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

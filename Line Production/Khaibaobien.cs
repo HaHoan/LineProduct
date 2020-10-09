@@ -158,7 +158,15 @@ namespace Line_Production
 
                 try
                 {
-                    ComControlPort.Open();
+                    
+                    if (ComControlPort.IsOpen == true)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        ComControlPort.Open();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -332,7 +340,7 @@ namespace Line_Production
                         IdCodeLenght = short.Parse(ReadTextFile(PathModelCurrent, 12));
                         ModelRevPosition = int.Parse(ReadTextFile(PathModelCurrent, 14));
                         ModelRev = ReadTextFile(PathModelCurrent, 16);
-                        PCBBOX = int.Parse(ReadTextFile(PathModelCurrent, 18));
+                      //  PCBBOX = int.Parse(ReadTextFile(PathModelCurrent, 18));
                         ConfirmModel = ReadTextFile(PathModelCurrent, 20) == "1" ? true : false;
                     }catch(Exception e)
                     {

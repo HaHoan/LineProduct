@@ -11,6 +11,22 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +47,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -44,8 +62,10 @@
       <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\USAPReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Constants.cs" />
     <Compile Include="Control.cs">
       <SubType>Form</SubType>
@@ -76,6 +101,11 @@
     <Compile Include="Control.Designer.cs">
       <DependentUpon>Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\DataProvider.cs" />
+    <Compile Include="Database\DBSQLServerUtils.cs" />
+    <Compile Include="Database\DBUtils.cs" />
+    <Compile Include="Database\HondaLocks.cs" />
+    <Compile Include="Entities\HondaLock.cs" />
     <Compile Include="Entities\Model.cs" />
     <Compile Include="Entities\Online.cs" />
     <Compile Include="fmLogin.cs">
@@ -93,7 +123,7 @@
     <Compile Include="Khaibaobien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.cs">
+    <Compile Include="Module.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NativeWin32.cs" />
@@ -168,108 +198,6 @@
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.BOARD_BIND_STATUSEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.CheckPartExistResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.CheckUserLoginResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBarcodeRuleEntityByRuleNOResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoJsonResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBarodeRuleItemsByRuleNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBarodeRuleItemsLikeNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBarodeRulesLikeNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBoardBinStatusByBoardNoAndOrderNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetBoardBinStatusByBoardNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetEntityINSPECTION_PROCESSESResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetLineStartByLineIdJsonResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetLineStartByLineIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListBarodeRuleItemsStartWidthResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListBoardBinStatusByBaseNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListBoardBinStatusByOrderNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListINSPECTION_PROCESSESLikeKeywordResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListINSPECTION_PROCESSESStartWidthResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListModelLikeKeywordResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListModelStartWidthResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListOrderItemsByIdJsonResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetListOrderItemsByIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetMacResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetModelsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetRoleMemberResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetRuleByProductResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetScanningLogsByBoardNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetScanningLogsByQueryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetScanningLogsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetStationNoLikeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetUserByIDResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetUserToJsonByIDResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetWorkOrderItemByBoardNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetWorkOrderItemResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.GetWorkOrderProcedureResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.INSPECTION_PROCESSESEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -279,31 +207,10 @@
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.KYOCERAEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.KyoGetBoardResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.KyoGetMacResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.KyoMacEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.KyoRemoveBoardResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.KyoSaveBoardResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.MACHINESEntity.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.MaterialCheckReloadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.MaterialGetOperationLogsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.MaterialLinesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.MATERIAL_DOCUMENTSEntity.datasource">
@@ -313,9 +220,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.MATERIAL_ORDER_ITEMSEntity.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.ModelSavesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.ModelsEntity.datasource">
@@ -330,9 +234,6 @@
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.SCANNING_LOGSEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PVSReference\Line_Production.PVSReference.SearchProductsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\PVSReference\Line_Production.PVSReference.USERSEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -343,6 +244,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PVSReference\PVSWebService.wsdl" />
+    <None Include="Connected Services\USAPReference\Line_Production.USAPReference.BCLBFLMEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\USAPReference\USAPWebService.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -358,17 +263,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\PVSReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\PVSReference\configuration.svcinfo" />
-    <None Include="Connected Services\PVSReference\configuration91.svcinfo" />
-    <None Include="Connected Services\PVSReference\PVSWebService.disco" />
     <None Include="Connected Services\LineProductWebServiceReference\LineProductRealtimeWebService.disco" />
     <None Include="Connected Services\LineProductWebServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\LineProductWebServiceReference\configuration.svcinfo" />
     <None Include="Connected Services\LineProductWebServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PVSReference\PVSWebService.disco" />
+    <None Include="Connected Services\PVSReference\configuration91.svcinfo" />
+    <None Include="Connected Services\PVSReference\configuration.svcinfo" />
+    <None Include="Connected Services\PVSReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\USAPReference\USAPWebService.disco" />
+    <None Include="Connected Services\USAPReference\configuration91.svcinfo" />
+    <None Include="Connected Services\USAPReference\configuration.svcinfo" />
+    <None Include="Connected Services\USAPReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -396,6 +308,17 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\LineProductWebServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\PVSReference\" />
+    <WCFMetadataStorage Include="Connected Services\USAPReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

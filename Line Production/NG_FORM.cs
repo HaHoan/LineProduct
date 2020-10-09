@@ -20,7 +20,8 @@ namespace Line_Production
 
         private void NG_FORM_FormClosed(object sender, FormClosedEventArgs e)
         {
-            new Control().Show();
+
+           // new Control().Show();
            
         }
 

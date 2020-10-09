@@ -30,3 +30,18 @@ D:\Quyet\Canon\Line Production\Line Production\obj\Debug\Line Production.csproj.
 D:\Quyet\Canon\Line Production\Line Production\obj\Debug\Line Production.csproj.CopyComplete
 D:\Quyet\Canon\Line Production\Line Production\obj\Debug\Line Production.exe
 D:\Quyet\Canon\Line Production\Line Production\obj\Debug\Line Production.pdb
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\bin\Debug\Line Production.exe.config
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\bin\Debug\Line Production.exe
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\bin\Debug\Line Production.pdb
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\bin\Debug\Microsoft.VisualBasic.dll
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line_Production.Control.resources
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line_Production.fmLogin.resources
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line_Production.frmConfig.resources
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line_Production.NG_FORM.resources
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line_Production.Properties.Resources.resources
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line_Production.Schedule.resources
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.csproj.GenerateResource.cache
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.csproj.CoreCompileInputs.cache
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.csproj.CopyComplete
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.exe
+D:\18.HOANHT\Phần mềm của công ty\C#\Line Product\LineProduct\Line Production\obj\Debug\Line Production.pdb
